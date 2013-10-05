@@ -26,6 +26,10 @@
 		41D4569A17FFA9B6004D662F /* PokemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4569917FFA9B6004D662F /* PokemonTests.m */; };
 		41D456A517FFAB46004D662F /* MAPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D456A417FFAB46004D662F /* MAPokemon.m */; };
 		4873DE3A17FFAF7E006DADC6 /* MAPokemonMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */; };
+		4873DE3D17FFB9A4006DADC6 /* MABattleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3C17FFB9A4006DADC6 /* MABattleManager.m */; };
+		4873DE4017FFBB60006DADC6 /* MATrainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3F17FFBB60006DADC6 /* MATrainer.m */; };
+		4873DE4317FFBEC4006DADC6 /* Squirtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4873DE4117FFBEC4006DADC6 /* Squirtle.png */; };
+		4873DE4417FFBEC4006DADC6 /* Squirtle_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4873DE4217FFBEC4006DADC6 /* Squirtle_back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,12 @@
 		41D456A417FFAB46004D662F /* MAPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPokemon.m; sourceTree = "<group>"; };
 		4873DE3817FFAF7E006DADC6 /* MAPokemonMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPokemonMove.h; sourceTree = "<group>"; };
 		4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPokemonMove.m; sourceTree = "<group>"; };
+		4873DE3B17FFB9A4006DADC6 /* MABattleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MABattleManager.h; path = Controllers/MABattleManager.h; sourceTree = "<group>"; };
+		4873DE3C17FFB9A4006DADC6 /* MABattleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MABattleManager.m; path = Controllers/MABattleManager.m; sourceTree = "<group>"; };
+		4873DE3E17FFBB60006DADC6 /* MATrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATrainer.h; sourceTree = "<group>"; };
+		4873DE3F17FFBB60006DADC6 /* MATrainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATrainer.m; sourceTree = "<group>"; };
+		4873DE4117FFBEC4006DADC6 /* Squirtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squirtle.png; sourceTree = "<group>"; };
+		4873DE4217FFBEC4006DADC6 /* Squirtle_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squirtle_back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +147,11 @@
 				41D4568217FFA9B5004D662F /* MyScene.m */,
 				41D4568417FFA9B5004D662F /* Spaceship.png */,
 				41D4568617FFA9B5004D662F /* Images.xcassets */,
+				4873DE4117FFBEC4006DADC6 /* Squirtle.png */,
+				4873DE4217FFBEC4006DADC6 /* Squirtle_back.png */,
 				41D4567017FFA9B5004D662F /* Supporting Files */,
+				4873DE3B17FFB9A4006DADC6 /* MABattleManager.h */,
+				4873DE3C17FFB9A4006DADC6 /* MABattleManager.m */,
 			);
 			path = Pokemon;
 			sourceTree = "<group>";
@@ -178,6 +192,8 @@
 				41D456A417FFAB46004D662F /* MAPokemon.m */,
 				4873DE3817FFAF7E006DADC6 /* MAPokemonMove.h */,
 				4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */,
+				4873DE3E17FFBB60006DADC6 /* MATrainer.h */,
+				4873DE3F17FFBB60006DADC6 /* MATrainer.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -258,7 +274,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4873DE4417FFBEC4006DADC6 /* Squirtle_back.png in Resources */,
 				41D4567417FFA9B5004D662F /* InfoPlist.strings in Resources */,
+				4873DE4317FFBEC4006DADC6 /* Squirtle.png in Resources */,
 				41D4568717FFA9B5004D662F /* Images.xcassets in Resources */,
 				41D4568517FFA9B5004D662F /* Spaceship.png in Resources */,
 				41D4567D17FFA9B5004D662F /* Main.storyboard in Resources */,
@@ -281,7 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D4568317FFA9B5004D662F /* MyScene.m in Sources */,
+				4873DE4017FFBB60006DADC6 /* MATrainer.m in Sources */,
 				41D4568017FFA9B5004D662F /* ViewController.m in Sources */,
+				4873DE3D17FFB9A4006DADC6 /* MABattleManager.m in Sources */,
 				4873DE3A17FFAF7E006DADC6 /* MAPokemonMove.m in Sources */,
 				41D456A517FFAB46004D662F /* MAPokemon.m in Sources */,
 				41D4567A17FFA9B5004D662F /* AppDelegate.m in Sources */,

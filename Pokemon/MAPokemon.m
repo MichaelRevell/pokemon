@@ -7,6 +7,7 @@
 //
 
 #import "MAPokemon.h"
+#import "MAPokemonMove.h"
 
 @implementation MAPokemon
 
@@ -24,6 +25,9 @@
             self.special_attack = 10;
             self.special_defense = 10;
             self.speed = 10;
+            self.moves = @[[MAPokemonMove buildMove:@"Tackle"]];
+            self.frontSpritePath = @"Squirtle";
+            self.backSpritePath = @"Squirtle_back";
         }
         else {
             return nil;

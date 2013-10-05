@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MAPokemonMove.h"
 
 @interface MAPokemon : NSObject
 
@@ -26,6 +27,9 @@
 @property int special_attack;
 @property int special_defense;
 @property int speed;
+
+// Moves
+@property (strong, nonatomic) NSArray *moves;
 
 
 // Images

@@ -17,4 +17,6 @@
 @property int accuracy;
 @property int pp;
 
++(MAPokemonMove*)buildMove:(NSString*) moveName;
+
 @end
