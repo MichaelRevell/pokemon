@@ -10,6 +10,10 @@
 
 @implementation MABattleManager
 
+@synthesize user_hp;
+@synthesize computer_hp;
+@synthesize status;
+
 -(id)initWithTrainer:(MATrainer*)trainer1 otherTrainer:(MATrainer*)trainer2 {
     if(self = [super init]) {
         self.trainer1 = trainer1;
@@ -21,6 +25,13 @@
 -(void)attackWithMove:(int)move {
     self.trainer2.pokemon.current_hp--;
     self.trainer1.pokemon.current_hp--;
+    
+    self.user_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer1.pokemon.current_hp, self.trainer1.pokemon.max_hp];
+    self.status = [NSString stringWithFormat:@"You attack for 1 damage"];
+    sleep(5);
+    self.computer_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer2.pokemon.current_hp, self.trainer2.pokemon.max_hp];
+    self.status = [NSString stringWithFormat:@"The Computer attacks for 1 damage"];
+    
 }
 
 @end

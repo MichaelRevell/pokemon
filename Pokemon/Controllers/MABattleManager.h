@@ -12,6 +12,9 @@
 @interface MABattleManager : NSObject
 
 @property (strong, nonatomic) MATrainer *trainer1, *trainer2;
+@property (strong, nonatomic) NSString *user_hp;
+@property (strong, nonatomic) NSString *computer_hp;
+@property (strong, nonatomic) NSString *status;
 
 -(id)initWithTrainer:(MATrainer*)trainer1 otherTrainer:(MATrainer*)trainer2;
 -(void)attackWithMove:(int)move;

@@ -34,6 +34,11 @@
     
     
     self.bm = [[MABattleManager alloc] initWithTrainer:trainer1 otherTrainer:trainer2];
+    [self.bm addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.bm addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
+//        [bm addObserver:self forKeyPath@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
+//    [[NSNotificationCenter defaultCenter] addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
+//    [[NSNotificationCenter defaultCenter] addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
     
     // Configure the view.
     SKView * skView = (SKView *)self.view;
@@ -57,11 +62,22 @@
     return YES;
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if([keyPath isEqualToString:@"user_hp"]) {
+        self.user_hp.text = self.bm.user_hp;
+    }
+    else if([keyPath isEqualToString:@"computer_hp"]) {
+        self.computer_hp.text = self.bm.computer_hp;
+    }
+    
+    NSLog(@"Received key: %@", keyPath);
+}
+
 - (IBAction)clickedAttack:(id)sender {
     NSLog(@"ATTACK!");
     [self.bm attackWithMove:1];
-    self.user_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer1.pokemon.current_hp, self.bm.trainer1.pokemon.max_hp];
-    self.computer_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer2.pokemon.current_hp, self.bm.trainer2.pokemon.max_hp];
+//    self.user_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer1.pokemon.current_hp, self.bm.trainer1.pokemon.max_hp];
+//    self.computer_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer2.pokemon.current_hp, self.bm.trainer2.pokemon.max_hp];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
