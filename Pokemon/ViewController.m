@@ -50,7 +50,7 @@
     // Create and configure the scene.
  
     
-    // Present the scene.
+    // Set Images.
     self.user_image.image = [UIImage imageNamed:@"Squirtle_back" ];
     self.computer_image.image = [UIImage imageNamed:@"Squirtle" ];
     

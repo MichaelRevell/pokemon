@@ -22,6 +22,7 @@
 -(void)attackTrainer:(MATrainer *)trainer withMove:(int) move isUser:(bool)is_user {
     int damage = rand() % 10;
     damage = [trainer.pokemon getsHitWith:damage];
+    
     if (is_user) {
         self.status = [NSString stringWithFormat:@"You attack computer for %d damage", damage];
     } else {
