@@ -24,14 +24,16 @@
 
 -(void)attackWithMove:(int)move {
     self.trainer2.pokemon.current_hp--;
-    self.trainer1.pokemon.current_hp--;
-    
-    self.user_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer1.pokemon.current_hp, self.trainer1.pokemon.max_hp];
-    self.status = [NSString stringWithFormat:@"You attack for 1 damage"];
-    sleep(5);
     self.computer_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer2.pokemon.current_hp, self.trainer2.pokemon.max_hp];
-    self.status = [NSString stringWithFormat:@"The Computer attacks for 1 damage"];
+    self.status = [NSString stringWithFormat:@"You attack for 1 damage"];
     
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
+}
+
+-(void)doComputerStuff {
+    self.trainer1.pokemon.current_hp--;
+    self.user_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer1.pokemon.current_hp, self.trainer1.pokemon.max_hp];
+    self.status = [NSString stringWithFormat:@"The Computer attacks for 1 damage"];
 }
 
 @end
