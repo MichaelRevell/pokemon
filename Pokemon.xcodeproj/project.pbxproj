@@ -24,6 +24,7 @@
 		41D4569017FFA9B6004D662F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D4566B17FFA9B5004D662F /* UIKit.framework */; };
 		41D4569817FFA9B6004D662F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D4569617FFA9B6004D662F /* InfoPlist.strings */; };
 		41D4569A17FFA9B6004D662F /* PokemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4569917FFA9B6004D662F /* PokemonTests.m */; };
+		41D456A517FFAB46004D662F /* MAPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D456A417FFAB46004D662F /* MAPokemon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		41D4569517FFA9B6004D662F /* PokemonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PokemonTests-Info.plist"; sourceTree = "<group>"; };
 		41D4569717FFA9B6004D662F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		41D4569917FFA9B6004D662F /* PokemonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokemonTests.m; sourceTree = "<group>"; };
+		41D456A317FFAB46004D662F /* MAPokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPokemon.h; sourceTree = "<group>"; };
+		41D456A417FFAB46004D662F /* MAPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPokemon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 		41D4566F17FFA9B5004D662F /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				41D456A617FFAB61004D662F /* Models */,
 				41D4567817FFA9B5004D662F /* AppDelegate.h */,
 				41D4567917FFA9B5004D662F /* AppDelegate.m */,
 				41D4567B17FFA9B5004D662F /* Main.storyboard */,
@@ -162,6 +166,15 @@
 				41D4569617FFA9B6004D662F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41D456A617FFAB61004D662F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41D456A317FFAB46004D662F /* MAPokemon.h */,
+				41D456A417FFAB46004D662F /* MAPokemon.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +277,7 @@
 			files = (
 				41D4568317FFA9B5004D662F /* MyScene.m in Sources */,
 				41D4568017FFA9B5004D662F /* ViewController.m in Sources */,
+				41D456A517FFAB46004D662F /* MAPokemon.m in Sources */,
 				41D4567A17FFA9B5004D662F /* AppDelegate.m in Sources */,
 				41D4567617FFA9B5004D662F /* main.m in Sources */,
 			);
