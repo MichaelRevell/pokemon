@@ -39,7 +39,7 @@
 
 -(int)getsHitWith:(int)damage {
     self.current_hp -= damage;
-    self.current_hp = self.current_hp <= 0 ? 0 : self.current_hp;
+    self.current_hp = MAX(self.current_hp, 0);
     return damage;
 }
 

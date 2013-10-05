@@ -36,7 +36,7 @@
         [self battleEnded];
     }
     
-    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
 }
 
 -(void)doComputerStuff {
@@ -50,6 +50,9 @@
 }
 
 -(void)battleEnded {
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(alertBattleEnded) userInfo:nil repeats:NO];
+}
+-(void)alertBattleEnded {
     self.status = @"Battle is OVER!";
 }
 
