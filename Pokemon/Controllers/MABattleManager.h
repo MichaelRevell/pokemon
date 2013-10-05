@@ -20,5 +20,6 @@
 -(id)initWithTrainer:(MATrainer*)trainer1 otherTrainer:(MATrainer*)trainer2;
 -(void)attackWithMove:(int)move;
 -(void)battleEnded;
+-(void)alertBattleEnded;
 
 @end

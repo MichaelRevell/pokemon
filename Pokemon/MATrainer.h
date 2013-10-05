@@ -16,7 +16,7 @@
 
 
 -(id)initWithPokemon:(MAPokemon*)pokemon;
--(void)attackTrainer:(MATrainer *)trainer withMove:(int) move;
 -(BOOL)allPokemonDead;
+-(void)attackTrainer:(MATrainer *)trainer withMove:(int) move isUser:(bool)is_user;
 
 @end
