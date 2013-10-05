@@ -7,6 +7,7 @@
 //
 
 #import "MABattleManager.h"
+#import "MATrainer.h"
 
 @implementation MABattleManager
 
