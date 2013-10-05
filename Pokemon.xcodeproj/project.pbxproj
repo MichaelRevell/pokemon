@@ -17,7 +17,6 @@
 		41D4567D17FFA9B5004D662F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D4567B17FFA9B5004D662F /* Main.storyboard */; };
 		41D4568017FFA9B5004D662F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4567F17FFA9B5004D662F /* ViewController.m */; };
 		41D4568317FFA9B5004D662F /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4568217FFA9B5004D662F /* MyScene.m */; };
-		41D4568517FFA9B5004D662F /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D4568417FFA9B5004D662F /* Spaceship.png */; };
 		41D4568717FFA9B5004D662F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D4568617FFA9B5004D662F /* Images.xcassets */; };
 		41D4568E17FFA9B6004D662F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D4568D17FFA9B6004D662F /* XCTest.framework */; };
 		41D4568F17FFA9B6004D662F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D4566717FFA9B5004D662F /* Foundation.framework */; };
@@ -25,7 +24,6 @@
 		41D4569817FFA9B6004D662F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D4569617FFA9B6004D662F /* InfoPlist.strings */; };
 		41D4569A17FFA9B6004D662F /* PokemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4569917FFA9B6004D662F /* PokemonTests.m */; };
 		41D456A517FFAB46004D662F /* MAPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D456A417FFAB46004D662F /* MAPokemon.m */; };
-		41D456AA17FFC9CC004D662F /* MABattleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D456A917FFC9CC004D662F /* MABattleView.xib */; };
 		4873DE3A17FFAF7E006DADC6 /* MAPokemonMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */; };
 		4873DE3D17FFB9A4006DADC6 /* MABattleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3C17FFB9A4006DADC6 /* MABattleManager.m */; };
 		4873DE4017FFBB60006DADC6 /* MATrainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3F17FFBB60006DADC6 /* MATrainer.m */; };
@@ -60,7 +58,6 @@
 		41D4567F17FFA9B5004D662F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		41D4568117FFA9B5004D662F /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		41D4568217FFA9B5004D662F /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
-		41D4568417FFA9B5004D662F /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		41D4568617FFA9B5004D662F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		41D4568C17FFA9B6004D662F /* PokemonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D4568D17FFA9B6004D662F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -69,7 +66,6 @@
 		41D4569917FFA9B6004D662F /* PokemonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokemonTests.m; sourceTree = "<group>"; };
 		41D456A317FFAB46004D662F /* MAPokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPokemon.h; sourceTree = "<group>"; };
 		41D456A417FFAB46004D662F /* MAPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPokemon.m; sourceTree = "<group>"; };
-		41D456A917FFC9CC004D662F /* MABattleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MABattleView.xib; sourceTree = "<group>"; };
 		4873DE3817FFAF7E006DADC6 /* MAPokemonMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPokemonMove.h; sourceTree = "<group>"; };
 		4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPokemonMove.m; sourceTree = "<group>"; };
 		4873DE3B17FFB9A4006DADC6 /* MABattleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MABattleManager.h; path = Controllers/MABattleManager.h; sourceTree = "<group>"; };
@@ -143,12 +139,10 @@
 				41D4567817FFA9B5004D662F /* AppDelegate.h */,
 				41D4567917FFA9B5004D662F /* AppDelegate.m */,
 				41D4567B17FFA9B5004D662F /* Main.storyboard */,
-				41D456A917FFC9CC004D662F /* MABattleView.xib */,
 				41D4567E17FFA9B5004D662F /* ViewController.h */,
 				41D4567F17FFA9B5004D662F /* ViewController.m */,
 				41D4568117FFA9B5004D662F /* MyScene.h */,
 				41D4568217FFA9B5004D662F /* MyScene.m */,
-				41D4568417FFA9B5004D662F /* Spaceship.png */,
 				41D4568617FFA9B5004D662F /* Images.xcassets */,
 				4873DE4117FFBEC4006DADC6 /* Squirtle.png */,
 				4873DE4217FFBEC4006DADC6 /* Squirtle_back.png */,
@@ -278,11 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4873DE4417FFBEC4006DADC6 /* Squirtle_back.png in Resources */,
-				41D456AA17FFC9CC004D662F /* MABattleView.xib in Resources */,
 				41D4567417FFA9B5004D662F /* InfoPlist.strings in Resources */,
 				4873DE4317FFBEC4006DADC6 /* Squirtle.png in Resources */,
 				41D4568717FFA9B5004D662F /* Images.xcassets in Resources */,
-				41D4568517FFA9B5004D662F /* Spaceship.png in Resources */,
 				41D4567D17FFA9B5004D662F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

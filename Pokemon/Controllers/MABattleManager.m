@@ -19,15 +19,16 @@
     if(self = [super init]) {
         self.trainer1 = trainer1;
         self.trainer2 = trainer2;
+        [self.trainer1 addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
+        [self.trainer2 addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
         self.is_user_move = true;
     }
     return self;
 }
 
 -(void)attackWithMove:(int)move {
-    self.trainer2.pokemon.current_hp--;
+    [self.trainer1 attackTrainer:self.trainer2 withMove:move isUser:true];
     self.computer_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer2.pokemon.current_hp, self.trainer2.pokemon.max_hp];
-    self.status = [NSString stringWithFormat:@"You attack for 1 damage"];
     
     self.is_user_move = false;
     if ([self.trainer1 allPokemonDead]) {
@@ -38,7 +39,7 @@
 }
 
 -(void)doComputerStuff {
-    self.trainer1.pokemon.current_hp--;
+    [self.trainer2 attackTrainer:self.trainer1 withMove:0 isUser:false];
     self.user_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer1.pokemon.current_hp, self.trainer1.pokemon.max_hp];
     self.status = [NSString stringWithFormat:@"The Computer attacks for 1 damage"];
     if ([self.trainer1 allPokemonDead]) {
@@ -49,6 +50,12 @@
 
 -(void)battleEnded {
     self.status = @"Battle is OVER!";
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    MATrainer *m = object;
+    NSLog(@"SETTING STATUS MOTHER FUCKER (%@ heehee)", keyPath);
+    self.status = m.status;
 }
 
 @end
