@@ -10,6 +10,7 @@
 
 @interface MAPokemonMove : NSObject
 
+@property NSString *name;
 @property NSString *type;
 @property NSString *category;
 

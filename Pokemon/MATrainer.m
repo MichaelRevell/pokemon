@@ -21,7 +21,7 @@
 
 -(void)attackTrainer:(MATrainer *)trainer withMove:(int) move isUser:(bool)is_user {
     //int damage = self.pokemon.attack * ((rand() % 10) / 10);
-    int damage = rand() % 10;
+    int damage = [self.pokemon attackWithMove:move];
     damage = [trainer.pokemon getsHitWith:damage];
     
     if (is_user) {

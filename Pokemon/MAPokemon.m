@@ -37,6 +37,14 @@
     return self;
 };
 
+-(int)attackWithMove:(int)move {
+    MAPokemonMove *current_move = [self.moves objectAtIndex:0];
+    self.status = [NSString stringWithFormat:@"Uses %@", current_move.name ];
+    NSLog(@"Uses %@", current_move.name );
+    //return current_move.power;
+    return arc4random() % 10;
+}
+
 -(int)getsHitWith:(int)damage {
     //damage = MAX((damage - 1), 0);
     self.current_hp -= damage;

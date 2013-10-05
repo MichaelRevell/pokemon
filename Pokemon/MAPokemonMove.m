@@ -10,8 +10,9 @@
 
 @implementation MAPokemonMove
 
-- initWithType:(NSString *)type andCategory:(NSString*)category andPower:(int)power andAccuracy:(int)accuracy andPP:(int)pp {
+- initWithType:(NSString *)type andCategory:(NSString*)category andPower:(int)power andAccuracy:(int)accuracy andPP:(int)pp andMoveName:(NSString *)name {
     if(self = [super init]) {
+        self.name = name;
         self.type = type;
         self.category = category;
         self.power = power;
@@ -23,7 +24,7 @@
 
 +(MAPokemonMove*)buildMove:(NSString*) moveName {
     if([moveName isEqualToString:@"Tackle"]) {
-        return [[MAPokemonMove alloc] initWithType:@"Normal" andCategory:@"Physical" andPower:50 andAccuracy:100 andPP:35];
+        return [[MAPokemonMove alloc] initWithType:@"Normal" andCategory:@"Physical" andPower:10 andAccuracy:100 andPP:35 andMoveName:moveName];
     }
     return nil;
 }

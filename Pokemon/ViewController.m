@@ -39,6 +39,7 @@
     [self.bm addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"is_user_move" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.bm addObserver:self forKeyPath:@"game_over" options:NSKeyValueObservingOptionNew context:NULL];
     
     self.user_image.image = [UIImage imageNamed:@"Squirtle_back" ];
     self.computer_image.image = [UIImage imageNamed:@"Squirtle" ];
@@ -63,6 +64,13 @@
     }
     else if([keyPath isEqualToString:@"status"]) {
         self.status.text = self.bm.status;
+    }
+    else if([keyPath isEqualToString:@"game_over"]) {
+        if (self.bm.game_over == true) {
+            [self.attack setEnabled:NO];
+        } else {
+            [self.attack setEnabled:YES];
+        }
     }
     else if([keyPath isEqualToString:@"is_user_move"]) {
         if (self.bm.is_user_move == true) {

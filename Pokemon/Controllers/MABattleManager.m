@@ -15,6 +15,7 @@
 @synthesize computer_hp;
 @synthesize status;
 @synthesize is_user_move;
+@synthesize game_over;
 
 -(id)initWithTrainer:(MATrainer*)trainer1 otherTrainer:(MATrainer*)trainer2 {
     if(self = [super init]) {
@@ -34,7 +35,7 @@
     
     self.is_user_move = false;
     
-    if ([self.trainer1 allPokemonDead]) {
+    if ([self.trainer2 allPokemonDead]) {
         [self battleEnded];
     }
     
