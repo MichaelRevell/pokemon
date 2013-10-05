@@ -36,6 +36,7 @@
     self.bm = [[MABattleManager alloc] initWithTrainer:trainer1 otherTrainer:trainer2];
     [self.bm addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.bm addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
 //        [bm addObserver:self forKeyPath@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
 //    [[NSNotificationCenter defaultCenter] addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
 //    [[NSNotificationCenter defaultCenter] addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
@@ -68,6 +69,9 @@
     }
     else if([keyPath isEqualToString:@"computer_hp"]) {
         self.computer_hp.text = self.bm.computer_hp;
+    }
+    else if([keyPath isEqualToString:@"status"]) {
+        self.status.text = self.bm.status;
     }
     
     NSLog(@"Received key: %@", keyPath);
