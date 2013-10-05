@@ -42,7 +42,6 @@
 -(void)doComputerStuff {
     [self.trainer2 attackTrainer:self.trainer1 withMove:0 isUser:false];
     self.user_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer1.pokemon.current_hp, self.trainer1.pokemon.max_hp];
-    self.status = [NSString stringWithFormat:@"The Computer attacks for 1 damage"];
     if ([self.trainer1 allPokemonDead]) {
         [self battleEnded];
     }
