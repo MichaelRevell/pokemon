@@ -18,4 +18,9 @@
     return self;
 }
 
+-(void)attackWithMove:(int)move {
+    self.trainer2.pokemon.current_hp--;
+    self.trainer1.pokemon.current_hp--;
+}
+
 @end
