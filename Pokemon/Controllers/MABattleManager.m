@@ -21,6 +21,7 @@
         self.trainer2 = trainer2;
         [self.trainer1 addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
         [self.trainer2 addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
+        self.is_user_move = true;
     }
     return self;
 }
@@ -29,12 +30,19 @@
     [self.trainer1 attackTrainer:self.trainer2 withMove:move isUser:true];
     self.computer_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer2.pokemon.current_hp, self.trainer2.pokemon.max_hp];
     
+    self.is_user_move = false;
     [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
 }
 
 -(void)doComputerStuff {
     [self.trainer2 attackTrainer:self.trainer1 withMove:0 isUser:false];
     self.user_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer1.pokemon.current_hp, self.trainer1.pokemon.max_hp];
+    self.status = [NSString stringWithFormat:@"The Computer attacks for 1 damage"];
+    self.is_user_move = true;
+}
+
+-(void)battleEnded {
+    self.status = @"Battle is OVER!";
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

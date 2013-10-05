@@ -30,8 +30,6 @@
 		4873DE4017FFBB60006DADC6 /* MATrainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3F17FFBB60006DADC6 /* MATrainer.m */; };
 		4873DE4317FFBEC4006DADC6 /* Squirtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4873DE4117FFBEC4006DADC6 /* Squirtle.png */; };
 		4873DE4417FFBEC4006DADC6 /* Squirtle_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4873DE4217FFBEC4006DADC6 /* Squirtle_back.png */; };
-		4873DE4617FFE096006DADC6 /* pokemon-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4873DE4517FFE096006DADC6 /* pokemon-logo.jpg */; };
-		4873DE4817FFE23B006DADC6 /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4873DE4717FFE23B006DADC6 /* grass.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +76,6 @@
 		4873DE3F17FFBB60006DADC6 /* MATrainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATrainer.m; sourceTree = "<group>"; };
 		4873DE4117FFBEC4006DADC6 /* Squirtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squirtle.png; sourceTree = "<group>"; };
 		4873DE4217FFBEC4006DADC6 /* Squirtle_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squirtle_back.png; sourceTree = "<group>"; };
-		4873DE4517FFE096006DADC6 /* pokemon-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pokemon-logo.jpg"; sourceTree = "<group>"; };
-		4873DE4717FFE23B006DADC6 /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +141,6 @@
 				41D4567817FFA9B5004D662F /* AppDelegate.h */,
 				41D4567917FFA9B5004D662F /* AppDelegate.m */,
 				41D4567B17FFA9B5004D662F /* Main.storyboard */,
-				4873DE4517FFE096006DADC6 /* pokemon-logo.jpg */,
-				4873DE4717FFE23B006DADC6 /* grass.jpg */,
 				41D4567E17FFA9B5004D662F /* ViewController.h */,
 				41D4567F17FFA9B5004D662F /* ViewController.m */,
 				41D4568117FFA9B5004D662F /* MyScene.h */,
@@ -280,13 +274,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4873DE4817FFE23B006DADC6 /* grass.jpg in Resources */,
 				4873DE4417FFBEC4006DADC6 /* Squirtle_back.png in Resources */,
 				41D4567417FFA9B5004D662F /* InfoPlist.strings in Resources */,
 				4873DE4317FFBEC4006DADC6 /* Squirtle.png in Resources */,
 				41D4568717FFA9B5004D662F /* Images.xcassets in Resources */,
 				41D4568517FFA9B5004D662F /* Spaceship.png in Resources */,
-				4873DE4617FFE096006DADC6 /* pokemon-logo.jpg in Resources */,
 				41D4567D17FFA9B5004D662F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
