@@ -30,14 +30,20 @@
     self.status = [NSString stringWithFormat:@"You attack for 1 damage"];
     
     self.is_user_move = false;
+    if ([self.trainer1 allPokemonDead]) {
+        [self battleEnded];
+    }
     
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
 }
 
 -(void)doComputerStuff {
     self.trainer1.pokemon.current_hp--;
     self.user_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer1.pokemon.current_hp, self.trainer1.pokemon.max_hp];
     self.status = [NSString stringWithFormat:@"The Computer attacks for 1 damage"];
+    if ([self.trainer1 allPokemonDead]) {
+        [self battleEnded];
+    }
     self.is_user_move = true;
 }
 

@@ -37,6 +37,8 @@
 @property (strong, nonatomic)  NSString *backSpritePath;
 
 
-- (id)initWithType:(NSString *)type;
+-(id)initWithType:(NSString *)type;
+-(int)getsHitWith:(int)damage;
+-(bool)isDead;
 
 @end

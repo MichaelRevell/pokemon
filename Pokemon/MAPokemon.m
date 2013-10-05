@@ -37,4 +37,14 @@
     return self;
 };
 
+-(int)getsHitWith:(int)damage {
+    self.current_hp -= damage;
+    self.current_hp = self.current_hp <= 0 ? 0 : self.current_hp;
+    return damage;
+}
+
+-(bool)isDead {
+    return self.current_hp <= 0;
+}
+
 @end

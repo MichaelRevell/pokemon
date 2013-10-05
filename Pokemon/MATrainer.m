@@ -21,12 +21,17 @@
 
 -(void)attackTrainer:(MATrainer *)trainer withMove:(int) move isUser:(bool)is_user {
     int damage = rand() % 5;
+    damage = [trainer.pokemon getsHitWith:damage];
     trainer.pokemon.current_hp -= damage;
     if (is_user) {
         self.status = [NSString stringWithFormat:@"You attack computer for %d damage", damage];
     } else {
         self.status = [NSString stringWithFormat:@"Computer attacks you for %d damage", damage];
     }
+}
+
+-(BOOL)allPokemonDead {
+    return [self.pokemon isDead];
 }
 
 @end
