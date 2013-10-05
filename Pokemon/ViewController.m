@@ -37,6 +37,7 @@
     [self.bm addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.bm addObserver:self forKeyPath:@"is_user_move" options:NSKeyValueObservingOptionNew context:NULL];
 //        [bm addObserver:self forKeyPath@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
 //    [[NSNotificationCenter defaultCenter] addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
 //    [[NSNotificationCenter defaultCenter] addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
@@ -72,6 +73,13 @@
     }
     else if([keyPath isEqualToString:@"status"]) {
         self.status.text = self.bm.status;
+    }
+    else if([keyPath isEqualToString:@"is_user_move"]) {
+        if (self.bm.is_user_move == false) {
+            [self.attack setEnabled:NO];
+        } else {
+            [self.attack setEnabled:YES];
+        }
     }
     
     NSLog(@"Received key: %@", keyPath);
