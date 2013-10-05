@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="attack" destination="hQN-cV-oVh" id="QX1-f5-NSO"/>
                 <outlet property="computer_hp" destination="L9U-j3-xr3" id="L5M-QO-NFL"/>
                 <outlet property="computer_image" destination="vci-Fs-RZO" id="oOQ-qH-NmU"/>
                 <outlet property="status" destination="PKH-I6-fMQ" id="BD9-T4-6cb"/>

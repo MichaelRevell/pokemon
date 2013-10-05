@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSString *user_hp;
 @property (strong, nonatomic) NSString *computer_hp;
 @property (strong, nonatomic) NSString *status;
+@property BOOL game_over;
 @property BOOL is_user_move;
 
 -(id)initWithTrainer:(MATrainer*)trainer1 otherTrainer:(MATrainer*)trainer2;

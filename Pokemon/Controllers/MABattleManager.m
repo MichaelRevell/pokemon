@@ -23,6 +23,7 @@
         [self.trainer1 addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
         [self.trainer2 addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
         self.is_user_move = true;
+        self.game_over = false;
     }
     return self;
 }
@@ -51,6 +52,7 @@
 }
 
 -(void)battleEnded {
+    self.game_over = true;
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(alertBattleEnded) userInfo:nil repeats:NO];
 }
 -(void)alertBattleEnded {
