@@ -13,6 +13,7 @@
 @synthesize user_hp;
 @synthesize computer_hp;
 @synthesize status;
+@synthesize is_user_move;
 
 -(id)initWithTrainer:(MATrainer*)trainer1 otherTrainer:(MATrainer*)trainer2 {
     if(self = [super init]) {
