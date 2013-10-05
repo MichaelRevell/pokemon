@@ -24,4 +24,6 @@
 @property int speed;
 
 
+- (id)initWithType:(NSString *)type;
+
 @end
