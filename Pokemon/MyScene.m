@@ -8,6 +8,10 @@
 
 #import "MyScene.h"
 
+@interface MyScene ()
+
+@end
+
 @implementation MyScene
 
 -(id)initWithSize:(CGSize)size {    
