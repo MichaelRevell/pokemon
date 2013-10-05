@@ -57,17 +57,10 @@
                     <rect key="frame" x="20" y="236" width="130" height="115"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="pokemon-logo.jpg" id="mYo-Pr-8d0">
-                    <rect key="frame" x="19" y="20" width="131" height="109"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
-    <resources>
-        <image name="pokemon-logo.jpg" width="281" height="117"/>
-    </resources>
 </document>

@@ -32,11 +32,13 @@
     self.computer_hp = [NSString stringWithFormat:@"HP: %d/%d", self.trainer2.pokemon.current_hp, self.trainer2.pokemon.max_hp];
     
     self.is_user_move = false;
+    
     if ([self.trainer1 allPokemonDead]) {
         [self battleEnded];
     }
     
-    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
 }
 
 -(void)doComputerStuff {

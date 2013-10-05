@@ -45,6 +45,8 @@
     self.user_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer1.pokemon.current_hp, self.bm.trainer1.pokemon.max_hp];
     self.computer_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer2.pokemon.current_hp, self.bm.trainer2.pokemon.max_hp];
     self.status.numberOfLines = 4;
+    [self.attack setEnabled:YES];
+    self.attack.hidden = YES;
 }
 
 - (BOOL)shouldAutorotate
@@ -53,6 +55,7 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    NSLog(@"%@", keyPath);
     if([keyPath isEqualToString:@"user_hp"]) {
         self.user_hp.text = self.bm.user_hp;
     }
@@ -63,16 +66,23 @@
         self.status.text = self.bm.status;
     }
     else if([keyPath isEqualToString:@"is_user_move"]) {
-        if (self.bm.is_user_move == false) {
-            [self.attack setEnabled:NO];
-        } else {
+        if (self.bm.is_user_move == true) {
             [self.attack setEnabled:YES];
+            NSLog(@"enabled");
+        } else {
+            // Why is this not working anymore??
+            // Forest you broke this!
+            NSLog(@"disabled");
+            [self.attack setEnabled:NO];
         }
     }
+    
 }
 
 - (IBAction)clickedAttack:(id)sender {
-    [self.bm attackWithMove:1];
+    if (self.bm.is_user_move) {
+        [self.bm attackWithMove:1];
+    }
 }
 
 - (NSUInteger)supportedInterfaceOrientations

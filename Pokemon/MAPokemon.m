@@ -38,6 +38,7 @@
 };
 
 -(int)getsHitWith:(int)damage {
+    //damage = MAX((damage - 1), 0);
     self.current_hp -= damage;
     self.current_hp = MAX(self.current_hp, 0);
     return damage;
