@@ -25,6 +25,7 @@
 		41D4569817FFA9B6004D662F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D4569617FFA9B6004D662F /* InfoPlist.strings */; };
 		41D4569A17FFA9B6004D662F /* PokemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4569917FFA9B6004D662F /* PokemonTests.m */; };
 		41D456A517FFAB46004D662F /* MAPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D456A417FFAB46004D662F /* MAPokemon.m */; };
+		4873DE3A17FFAF7E006DADC6 /* MAPokemonMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		41D4569917FFA9B6004D662F /* PokemonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokemonTests.m; sourceTree = "<group>"; };
 		41D456A317FFAB46004D662F /* MAPokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPokemon.h; sourceTree = "<group>"; };
 		41D456A417FFAB46004D662F /* MAPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPokemon.m; sourceTree = "<group>"; };
+		4873DE3817FFAF7E006DADC6 /* MAPokemonMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPokemonMove.h; sourceTree = "<group>"; };
+		4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPokemonMove.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 			children = (
 				41D456A317FFAB46004D662F /* MAPokemon.h */,
 				41D456A417FFAB46004D662F /* MAPokemon.m */,
+				4873DE3817FFAF7E006DADC6 /* MAPokemonMove.h */,
+				4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			files = (
 				41D4568317FFA9B5004D662F /* MyScene.m in Sources */,
 				41D4568017FFA9B5004D662F /* ViewController.m in Sources */,
+				4873DE3A17FFAF7E006DADC6 /* MAPokemonMove.m in Sources */,
 				41D456A517FFAB46004D662F /* MAPokemon.m in Sources */,
 				41D4567A17FFA9B5004D662F /* AppDelegate.m in Sources */,
 				41D4567617FFA9B5004D662F /* main.m in Sources */,
@@ -490,6 +496,7 @@
 				41D4569F17FFA9B6004D662F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41D456A017FFA9B6004D662F /* Build configuration list for PBXNativeTarget "PokemonTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +505,7 @@
 				41D456A217FFA9B6004D662F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
