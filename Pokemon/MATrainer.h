@@ -12,7 +12,10 @@
 @interface MATrainer : NSObject
 
 @property (strong, nonatomic) MAPokemon *pokemon;
+@property (strong, nonatomic) NSString *status;
+
 
 -(id)initWithPokemon:(MAPokemon*)pokemon;
+-(void)attackTrainer:(MATrainer *)trainer withMove:(int) move;
 
 @end
