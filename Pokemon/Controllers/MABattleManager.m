@@ -41,4 +41,8 @@
     self.is_user_move = true;
 }
 
+-(void)battleEnded {
+    self.status = @"Battle is OVER!";
+}
+
 @end

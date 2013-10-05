@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *attack;
 @property (strong, nonatomic) MABattleManager *bm;
 @property (weak, nonatomic) IBOutlet UILabel *status;
+@property (weak, nonatomic) IBOutlet UIImageView *user_image;
+@property (weak, nonatomic) IBOutlet UIImageView *computer_image;
 
 @end
 
@@ -43,19 +45,18 @@
 //    [[NSNotificationCenter defaultCenter] addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
     
     // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+  
     
     // Create and configure the scene.
-    SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+ 
     
     // Present the scene.
-    [skView presentScene:scene];
+    self.user_image.image = [UIImage imageNamed:@"Squirtle_back" ];
+    self.computer_image.image = [UIImage imageNamed:@"Squirtle" ];
     
     self.user_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer1.pokemon.current_hp, self.bm.trainer1.pokemon.max_hp];
     self.computer_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer2.pokemon.current_hp, self.bm.trainer2.pokemon.max_hp];
+    self.status.numberOfLines = 4;
     
 }
 
