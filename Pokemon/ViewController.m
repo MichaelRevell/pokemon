@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *user_image;
 
 @property (weak, nonatomic) IBOutlet UIButton *attack;
+@property (strong, nonatomic) IBOutlet UIButton *attack2;
 @property (weak, nonatomic) IBOutlet UILabel *status;
 
 @property (strong, nonatomic) MABattleManager *bm;
@@ -47,6 +48,9 @@
     self.user_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer1.pokemon.current_hp, self.bm.trainer1.pokemon.max_hp];
     self.computer_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer2.pokemon.current_hp, self.bm.trainer2.pokemon.max_hp];
     self.status.numberOfLines = 4;
+     [self.attack setTitle:[[self.bm.trainer1.pokemon.moves objectAtIndex:0] name] forState:UIControlStateNormal];
+    
+    [self.attack2 setTitle:[[self.bm.trainer1.pokemon.moves objectAtIndex:1] name] forState:UIControlStateNormal];
 }
 
 - (BOOL)shouldAutorotate
@@ -68,15 +72,19 @@
     else if([keyPath isEqualToString:@"game_over"]) {
         if (self.bm.game_over == true) {
             [self.attack setEnabled:NO];
+            [self.attack2 setEnabled:NO];
         } else {
             [self.attack setEnabled:YES];
+            [self.attack2 setEnabled:YES];
         }
     }
     else if([keyPath isEqualToString:@"is_user_move"]) {
         if (self.bm.is_user_move == true) {
             [self.attack setEnabled:YES];
+             [self.attack2 setEnabled:YES];
         } else {
             [self.attack setEnabled:NO];
+            [self.attack2 setEnabled:NO];
         }
     }
     

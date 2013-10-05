@@ -10,22 +10,32 @@
 
 @implementation MAPokemonMove
 
-- initWithType:(NSString *)type andCategory:(NSString*)category andPower:(int)power andAccuracy:(int)accuracy andPP:(int)pp andMoveName:(NSString *)name {
+- (id)initWithName:(NSString *)name {
     if(self = [super init]) {
-        self.name = name;
-        self.type = type;
-        self.category = category;
-        self.power = power;
-        self.accuracy = accuracy;
-        self.pp = pp;
+        if([name isEqualToString:@"Tackle"]) {
+            self.name = @"Tackle";
+            self.type = @"Normal";
+            self.category = @"Physical";
+            self.power = 5;
+            self.accuracy = 100;
+            self.pp = 1;
+        }
+        else if ([name isEqualToString:@"Squirt"]) {
+            self.name = @"Squirt";
+            self.type = @"Water";
+            self.category = @"Special";
+            self.power = 10;
+            self.accuracy = 90;
+            self.pp = 5;
+        }
     }
     return self;
 }
 
 +(MAPokemonMove*)buildMove:(NSString*) moveName {
-    if([moveName isEqualToString:@"Tackle"]) {
+   /* if([moveName isEqualToString:@"Tackle"]) {
         return [[MAPokemonMove alloc] initWithType:@"Normal" andCategory:@"Physical" andPower:10 andAccuracy:100 andPP:35 andMoveName:moveName];
-    }
+    }*/
     return nil;
 }
 

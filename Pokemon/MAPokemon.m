@@ -20,12 +20,12 @@
             self.element = @"water";
             self.type = type;
             self.name = @"Squirtle";
-            self.attack = 10;
-            self.defense = 10;
-            self.special_attack = 10;
-            self.special_defense = 10;
-            self.speed = 10;
-            self.moves = @[[MAPokemonMove buildMove:@"Tackle"]];
+            self.attack = 5;
+            self.defense = 5;
+            self.special_attack = 5;
+            self.special_defense = 5;
+            self.speed = 5;
+            self.moves = @[[[MAPokemonMove alloc] initWithName:@"Tackle"], [[MAPokemonMove alloc] initWithName:@"Squirt"]];
             self.frontSpritePath = @"Squirtle";
             self.backSpritePath = @"Squirtle_back";
         }

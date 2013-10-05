@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="attack" destination="hQN-cV-oVh" id="QX1-f5-NSO"/>
+                <outlet property="attack2" destination="tHp-Hw-u7X" id="kMW-A7-OYH"/>
                 <outlet property="computer_hp" destination="L9U-j3-xr3" id="L5M-QO-NFL"/>
                 <outlet property="computer_image" destination="vci-Fs-RZO" id="oOQ-qH-NmU"/>
                 <outlet property="status" destination="PKH-I6-fMQ" id="BD9-T4-6cb"/>
@@ -39,7 +40,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hQN-cV-oVh">
-                    <rect key="frame" x="190" y="258" width="77" height="40"/>
+                    <rect key="frame" x="170" y="258" width="130" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -48,6 +49,18 @@
                     </state>
                     <connections>
                         <action selector="clickedAttack:" destination="-1" eventType="touchDown" id="3WO-r9-p9D"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tHp-Hw-u7X">
+                    <rect key="frame" x="170" y="306" width="130" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Attack">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedAttack:" destination="-1" eventType="touchDown" id="vUR-ev-CYD"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="vci-Fs-RZO">
