@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *computer_hp;
 @property (weak, nonatomic) IBOutlet UIButton *attack;
 @property (strong, nonatomic) MABattleManager *bm;
+@property (weak, nonatomic) IBOutlet UILabel *status;
 
 @end
 
@@ -46,8 +47,8 @@
     // Present the scene.
     [skView presentScene:scene];
     
-    self.user_hp.text = @"HP: 18/20";
-    self.computer_hp.text = @"HP: 16/20";
+    self.user_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer1.pokemon.current_hp, self.bm.trainer1.pokemon.max_hp];
+    self.computer_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer2.pokemon.current_hp, self.bm.trainer2.pokemon.max_hp];
     
 }
 
@@ -58,7 +59,9 @@
 
 - (IBAction)clickedAttack:(id)sender {
     NSLog(@"ATTACK!");
-    //[bm attackWithMove:1];
+    [self.bm attackWithMove:1];
+    self.user_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer1.pokemon.current_hp, self.bm.trainer1.pokemon.max_hp];
+    self.computer_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer2.pokemon.current_hp, self.bm.trainer2.pokemon.max_hp];
 }
 
 - (NSUInteger)supportedInterfaceOrientations

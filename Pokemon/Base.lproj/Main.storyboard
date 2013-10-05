@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5g-45-PoG">
-                                <rect key="frame" x="94" y="80" width="112" height="21"/>
+                                <rect key="frame" x="157" y="146" width="112" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -38,12 +38,19 @@
                                     <action selector="clickedAttack:" destination="LVB-YS-i5n" eventType="touchDown" id="6wp-Id-Oei"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMG-J2-xAG">
+                                <rect key="frame" x="20" y="190" width="177" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="attack" destination="qNa-zQ-OOP" id="2Ww-Io-S7b"/>
                         <outlet property="computer_hp" destination="s5g-45-PoG" id="mD5-XY-cgQ"/>
+                        <outlet property="status" destination="SMG-J2-xAG" id="4ej-3M-sVH"/>
                         <outlet property="user_hp" destination="HZU-sU-G9s" id="4cg-3F-PD2"/>
                     </connections>
                 </viewController>
