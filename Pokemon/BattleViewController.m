@@ -10,9 +10,13 @@
 #import "MABattleManager.h"
 #import "MATrainer.h"
 #import "MAPokemonMove.h"
+#import "DialogViewController.h"
 
 @interface BattleViewController ()
 
+@property (strong, nonatomic) UIViewController *nextViewController;
+
+@property (weak, nonatomic) IBOutlet UIButton *bitches;
 @property (weak, nonatomic) IBOutlet UILabel *computer_hp;
 @property (strong, nonatomic) IBOutlet UILabel *computer_pp;
 @property (weak, nonatomic) IBOutlet UIImageView *computer_image;
@@ -30,6 +34,8 @@
 
 @implementation BattleViewController
 
+@synthesize nextViewController;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -41,9 +47,8 @@
     [self.bm addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
     
-    [self.bm.trainer1.pokemon.pp_text addObserver:self forKeyPath:@"user_pp" options:NSKeyValueObservingOptionNew context:NULL];
-    [self.bm.trainer2.pokemon.pp_text addObserver:self forKeyPath:@"computer_pp" options:NSKeyValueObservingOptionNew context:NULL];
-    
+    [self.bm.trainer1.pokemon addObserver:self forKeyPath:@"pp_text" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.bm.trainer2.pokemon addObserver:self forKeyPath:@"pp_text" options:NSKeyValueObservingOptionNew context:NULL];
     
     [self.bm addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"is_user_move" options:NSKeyValueObservingOptionNew context:NULL];
@@ -72,16 +77,17 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    // NSLog(@"%@", keyPath);
+    NSLog(@"shit changed %@", keyPath);
     if([keyPath isEqualToString:@"user_hp"]) {
         self.user_hp.text = self.bm.user_hp;
-        self.computer_pp.text = self.bm.trainer2.pokemon.pp_text;
+//        self.computer_pp.text = self.bm.trainer2.pokemon.pp_text;
     }
     else if([keyPath isEqualToString:@"computer_hp"]) {
         self.computer_hp.text = self.bm.computer_hp;
-        self.user_pp.text = self.bm.trainer1.pokemon.pp_text;
+//        self.user_pp.text = self.bm.trainer1.pokemon.pp_text;
     }
-    else if([keyPath isEqualToString:@"user_pp"]) {
+    else if([keyPath isEqualToString:@"pp_text"]) {
+        NSLog(@"balls %@", object);
         // DEBUG: Why isn't this working?
         self.user_pp.text = self.bm.trainer1.pokemon.pp_text;
     }
@@ -111,6 +117,9 @@
         }
     }
     
+}
+- (IBAction)bitches:(id)sender {
+    self.nextViewController = [[DialogViewController alloc] initWithNibName:@"DialogViewController" bundle:nil];
 }
 
 - (IBAction)clickedAttack:(id)sender {

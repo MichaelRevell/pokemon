@@ -52,4 +52,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if([keyPath isEqualToString:@"nextViewController"]) {
+        UIViewController *v = [change objectForKey:NSKeyValueChangeNewKey];
+        self.window.rootViewController = v;
+        [self.window.rootViewController addObserver:self forKeyPath:@"nextViewController" options:NSKeyValueObservingOptionNew context:NULL];
+    }
+}
+
 @end
