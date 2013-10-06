@@ -58,7 +58,13 @@
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(alertBattleEnded) userInfo:nil repeats:NO];
 }
 -(void)alertBattleEnded {
-    self.status = @"Battle is OVER!";
+    if (self.trainer1.allPokemonDead){
+        self.status = @"Battle is OVER! You lost :-(";
+    }
+    else {
+        self.status = @"Battle is OVER! You WON! :-)";
+    }
+    
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

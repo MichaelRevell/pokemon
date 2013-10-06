@@ -41,8 +41,8 @@
     [self.bm addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"computer_hp" options:NSKeyValueObservingOptionNew context:NULL];
     
-    [self.bm.trainer1.pokemon.pp addObserver:self forKeyPath:@"user_pp" options:NSKeyValueObservingOptionNew context:NULL];
-    [self.bm.trainer2.pokemon.pp addObserver:self forKeyPath:@"computer_pp" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.bm.trainer1.pokemon.pp_text addObserver:self forKeyPath:@"user_pp" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.bm.trainer2.pokemon.pp_text addObserver:self forKeyPath:@"computer_pp" options:NSKeyValueObservingOptionNew context:NULL];
     
     
     [self.bm addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:NULL];
@@ -59,9 +59,11 @@
     self.computer_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer2.pokemon.current_hp, self.bm.trainer2.pokemon.max_hp];
     self.computer_pp.text = [NSString stringWithFormat:@"PP: %d/%d", self.bm.trainer2.pokemon.current_pp, self.bm.trainer2.pokemon.max_pp];
     self.status.numberOfLines = 4;
-     [self.attack setTitle:[[self.bm.trainer1.pokemon.moves objectAtIndex:0] name] forState:UIControlStateNormal];
     
-    [self.attack2 setTitle:[[self.bm.trainer1.pokemon.moves objectAtIndex:1] name] forState:UIControlStateNormal];
+    
+    [self.attack setTitle:[NSString stringWithFormat:@"%@ (%d)", [[self.bm.trainer1.pokemon.moves objectAtIndex:0] name], [[self.bm.trainer1.pokemon.moves objectAtIndex:0] pp]] forState:UIControlStateNormal];
+    
+    [self.attack2 setTitle:[NSString stringWithFormat:@"%@ (%d)", [[self.bm.trainer1.pokemon.moves objectAtIndex:1] name], [[self.bm.trainer1.pokemon.moves objectAtIndex:1] pp]] forState:UIControlStateNormal];
 }
 
 - (BOOL)shouldAutorotate
@@ -73,19 +75,19 @@
     // NSLog(@"%@", keyPath);
     if([keyPath isEqualToString:@"user_hp"]) {
         self.user_hp.text = self.bm.user_hp;
-        self.computer_pp.text = self.bm.trainer2.pokemon.pp;
+        self.computer_pp.text = self.bm.trainer2.pokemon.pp_text;
     }
     else if([keyPath isEqualToString:@"computer_hp"]) {
         self.computer_hp.text = self.bm.computer_hp;
-        self.user_pp.text = self.bm.trainer1.pokemon.pp;
+        self.user_pp.text = self.bm.trainer1.pokemon.pp_text;
     }
     else if([keyPath isEqualToString:@"user_pp"]) {
         // DEBUG: Why isn't this working?
-        self.user_pp.text = self.bm.trainer1.pokemon.pp;
+        self.user_pp.text = self.bm.trainer1.pokemon.pp_text;
     }
     else if([keyPath isEqualToString:@"computer_pp"]) {
         // DEBUG: Why isn't this working?
-        self.computer_pp.text = self.bm.trainer2.pokemon.pp;
+        self.computer_pp.text = self.bm.trainer2.pokemon.pp_text;
     }
     else if([keyPath isEqualToString:@"status"]) {
         self.status.text = self.bm.status;
