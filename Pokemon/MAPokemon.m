@@ -11,7 +11,7 @@
 
 @implementation MAPokemon
 
-@synthesize pp;
+@synthesize pp_text;
 
 - (id)initWithType:(NSString *)type {
     if (self = [super init]) {
@@ -21,7 +21,7 @@
             self.current_hp = 20;
             self.max_pp = 10;
             self.current_pp = 10;
-            self.pp = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
+            self.pp_text = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
             self.element = @"water";
             self.type = type;
             self.name = @"Squirtle";
@@ -45,9 +45,9 @@
 -(NSString *)attackPokemon:(MAPokemon *)enemy WithMove:(int)move {
     NSString *status = @"Status";
     MAPokemonMove *current_move = [self.moves objectAtIndex:move];
-    if (self.current_pp > current_move.pp) {
+    if (self.current_pp >= current_move.pp) {
         self.current_pp -= current_move.pp;
-        self.pp = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
+        self.pp_text = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
         
         double damage_from_level = (2.0 * self.level + 10)/250.0;
         double attack_over_defense = self.attack / self.defense;

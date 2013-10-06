@@ -25,7 +25,7 @@
 @property int current_hp;
 @property int max_pp;
 @property int current_pp;
-@property (strong, nonatomic) NSString *pp;
+@property (strong, nonatomic) NSString *pp_text;
 @property int attack;
 @property int defense;
 @property int special_attack;

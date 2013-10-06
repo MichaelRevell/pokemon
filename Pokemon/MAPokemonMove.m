@@ -24,9 +24,9 @@
             self.name = @"Squirt";
             self.type = @"Water";
             self.category = @"Special";
-            self.power = 10;
+            self.power = 20;
             self.accuracy = 90;
-            self.pp = 5;
+            self.pp = 4;
         }
     }
     return self;
