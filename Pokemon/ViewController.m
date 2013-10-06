@@ -13,6 +13,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) UIViewController *nextViewController;
+
 @property (weak, nonatomic) IBOutlet UILabel *computer_hp;
 @property (strong, nonatomic) IBOutlet UILabel *computer_pp;
 @property (weak, nonatomic) IBOutlet UIImageView *computer_image;
@@ -29,6 +31,8 @@
 @end
 
 @implementation ViewController
+
+@synthesize nextViewController;
 
 - (void)viewDidLoad
 {

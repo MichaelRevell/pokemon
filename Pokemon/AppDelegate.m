@@ -15,6 +15,7 @@
 {
     self.window.rootViewController = [[ViewController alloc] initWithNibName:@"View" bundle:nil];
     self.window.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"dqni4j.jpg"]];
+    [self.window.rootViewController addObserver:self forKeyPath:@"nextViewController" options:NSKeyValueObservingOptionNew context:NULL];
  //   self.window.backgroundColor = [UIColor redColor];
     // Override point for customization after application launch.
     return YES;
@@ -45,6 +46,14 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if([keyPath isEqualToString:@"nextViewController"]) {
+        UIViewController *v = [change objectForKey:NSKeyValueChangeNewKey];
+        self.window.rootViewController = v;
+        [self.window.rootViewController addObserver:self forKeyPath:@"nextViewController" options:NSKeyValueObservingOptionNew context:NULL];
+    }
 }
 
 @end

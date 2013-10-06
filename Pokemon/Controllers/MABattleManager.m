@@ -38,9 +38,7 @@
     if ([self.trainer2 allPokemonDead]) {
         [self battleEnded];
     } else {
-    
-    
-    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(doComputerStuff) userInfo:nil repeats:NO];
     }
 }
 
