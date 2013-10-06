@@ -8,6 +8,6 @@
 
 #import "BattleViewController.h"
 
-@interface DialogViewController : ViewController
+@interface DialogViewController : UIViewController
 
 @end
