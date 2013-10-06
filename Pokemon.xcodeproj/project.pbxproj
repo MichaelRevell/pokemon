@@ -26,8 +26,8 @@
 		41D456B118021F8A004D662F /* DialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D456AF18021F8A004D662F /* DialogViewController.xib */; };
 		41D456B41802214B004D662F /* green-backgroun.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D456B31802214B004D662F /* green-backgroun.png */; };
 		41D456B6180221F7004D662F /* pers6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41D456B5180221F7004D662F /* pers6.jpg */; };
-		41D456B9180226AA004D662F /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D456B8180226AA004D662F /* InputViewController.m */; };
-		41D456BB180226DF004D662F /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D456BA180226DF004D662F /* InputView.xib */; };
+		41D456BF18022B65004D662F /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D456BD18022B65004D662F /* InputViewController.m */; };
+		41D456C018022B65004D662F /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D456BE18022B65004D662F /* InputViewController.xib */; };
 		4859D2BF17FFEE0F00970CD5 /* BattleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2BE17FFEE0F00970CD5 /* BattleView.xib */; };
 		4859D2C117FFF4C300970CD5 /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C017FFF4C300970CD5 /* grass.jpg */; };
 		4859D2C317FFF59500970CD5 /* pokemon-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */; };
@@ -76,9 +76,9 @@
 		41D456AF18021F8A004D662F /* DialogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DialogViewController.xib; path = ../DialogViewController.xib; sourceTree = "<group>"; };
 		41D456B31802214B004D662F /* green-backgroun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-backgroun.png"; sourceTree = "<group>"; };
 		41D456B5180221F7004D662F /* pers6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pers6.jpg; sourceTree = "<group>"; };
-		41D456B7180226AA004D662F /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
-		41D456B8180226AA004D662F /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
-		41D456BA180226DF004D662F /* InputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
+		41D456BC18022B65004D662F /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputViewController.h; path = ../InputViewController.h; sourceTree = "<group>"; };
+		41D456BD18022B65004D662F /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputViewController.m; path = ../InputViewController.m; sourceTree = "<group>"; };
+		41D456BE18022B65004D662F /* InputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputViewController.xib; path = ../InputViewController.xib; sourceTree = "<group>"; };
 		4859D2BE17FFEE0F00970CD5 /* BattleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BattleView.xib; sourceTree = "<group>"; };
 		4859D2C017FFF4C300970CD5 /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
 		4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pokemon-logo.jpg"; sourceTree = "<group>"; };
@@ -216,9 +216,9 @@
 		41D456B218021F98004D662F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				41D456B7180226AA004D662F /* InputViewController.h */,
-				41D456BA180226DF004D662F /* InputView.xib */,
-				41D456B8180226AA004D662F /* InputViewController.m */,
+				41D456BC18022B65004D662F /* InputViewController.h */,
+				41D456BD18022B65004D662F /* InputViewController.m */,
+				41D456BE18022B65004D662F /* InputViewController.xib */,
 				4859D2BE17FFEE0F00970CD5 /* BattleView.xib */,
 				41D4567E17FFA9B5004D662F /* BattleViewController.h */,
 				41D4567F17FFA9B5004D662F /* BattleViewController.m */,
@@ -308,9 +308,9 @@
 				4873DE4417FFBEC4006DADC6 /* Squirtle_back.png in Resources */,
 				41D456B118021F8A004D662F /* DialogViewController.xib in Resources */,
 				41D456B41802214B004D662F /* green-backgroun.png in Resources */,
+				41D456C018022B65004D662F /* InputViewController.xib in Resources */,
 				41D456B6180221F7004D662F /* pers6.jpg in Resources */,
 				4859D2C317FFF59500970CD5 /* pokemon-logo.jpg in Resources */,
-				41D456BB180226DF004D662F /* InputView.xib in Resources */,
 				4859D2BF17FFEE0F00970CD5 /* BattleView.xib in Resources */,
 				4859D2C517FFF5DD00970CD5 /* dqni4j.jpg in Resources */,
 				41D4567417FFA9B5004D662F /* InfoPlist.strings in Resources */,
@@ -342,7 +342,7 @@
 				4873DE3A17FFAF7E006DADC6 /* MAPokemonMove.m in Sources */,
 				41D456A517FFAB46004D662F /* MAPokemon.m in Sources */,
 				41D4567A17FFA9B5004D662F /* AppDelegate.m in Sources */,
-				41D456B9180226AA004D662F /* InputViewController.m in Sources */,
+				41D456BF18022B65004D662F /* InputViewController.m in Sources */,
 				41D4567617FFA9B5004D662F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

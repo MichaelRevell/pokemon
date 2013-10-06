@@ -38,7 +38,7 @@
 }
 
 - (IBAction)next:(id)sender {
-    InputViewController *intputViewController = [[InputViewController alloc] initWithNibName:@"InputView" bundle:nil];
+    InputViewController *intputViewController = [[InputViewController alloc] initWithNibName:@"InputViewController" bundle:nil];
     
     //[self.navigationController pushViewController:intputViewController animated:YES];
     self.nextViewController = intputViewController;
