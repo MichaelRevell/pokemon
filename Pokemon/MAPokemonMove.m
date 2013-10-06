@@ -16,7 +16,7 @@
             self.name = @"Tackle";
             self.type = @"Normal";
             self.category = @"Physical";
-            self.power = 5;
+            self.power = 10;
             self.accuracy = 100;
             self.pp = 1;
         }

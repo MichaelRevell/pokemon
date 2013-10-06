@@ -23,6 +23,9 @@
 @property (strong, nonatomic) NSString *element;
 @property int max_hp;
 @property int current_hp;
+@property int max_pp;
+@property int current_pp;
+@property (strong, nonatomic) NSString *pp;
 @property int attack;
 @property int defense;
 @property int special_attack;
@@ -37,7 +40,7 @@
 @property (strong, nonatomic)  NSString *frontSpritePath;
 @property (strong, nonatomic)  NSString *backSpritePath;
 
--(int)attackWithMove:(int)move;
+-(NSString *)attackPokemon:(MAPokemon *)enemy WithMove:(int)move;
 -(id)initWithType:(NSString *)type;
 -(int)getsHitWith:(int)damage;
 -(bool)isDead;
