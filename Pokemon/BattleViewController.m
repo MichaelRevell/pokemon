@@ -1,17 +1,17 @@
 //
-//  ViewController.m
+//  BattleViewController.m
 //  Pokemon
 //
 //  Created by Michael Revell on 10/4/13.
 //  Copyright (c) 2013 Michael Revell. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BattleViewController.h"
 #import "MABattleManager.h"
 #import "MATrainer.h"
 #import "MAPokemonMove.h"
 
-@interface ViewController ()
+@interface BattleViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *computer_hp;
 @property (strong, nonatomic) IBOutlet UILabel *computer_pp;
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation ViewController
+@implementation BattleViewController
 
 - (void)viewDidLoad
 {

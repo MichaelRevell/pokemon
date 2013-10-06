@@ -14,7 +14,7 @@
 		41D4567417FFA9B5004D662F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D4567217FFA9B5004D662F /* InfoPlist.strings */; };
 		41D4567617FFA9B5004D662F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4567517FFA9B5004D662F /* main.m */; };
 		41D4567A17FFA9B5004D662F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4567917FFA9B5004D662F /* AppDelegate.m */; };
-		41D4568017FFA9B5004D662F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4567F17FFA9B5004D662F /* ViewController.m */; };
+		41D4568017FFA9B5004D662F /* BattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4567F17FFA9B5004D662F /* BattleViewController.m */; };
 		41D4568717FFA9B5004D662F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D4568617FFA9B5004D662F /* Images.xcassets */; };
 		41D4568E17FFA9B6004D662F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D4568D17FFA9B6004D662F /* XCTest.framework */; };
 		41D4568F17FFA9B6004D662F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D4566717FFA9B5004D662F /* Foundation.framework */; };
@@ -22,7 +22,10 @@
 		41D4569817FFA9B6004D662F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D4569617FFA9B6004D662F /* InfoPlist.strings */; };
 		41D4569A17FFA9B6004D662F /* PokemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4569917FFA9B6004D662F /* PokemonTests.m */; };
 		41D456A517FFAB46004D662F /* MAPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D456A417FFAB46004D662F /* MAPokemon.m */; };
-		4859D2BF17FFEE0F00970CD5 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2BE17FFEE0F00970CD5 /* View.xib */; };
+		41D456B018021F8A004D662F /* DialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D456AE18021F8A004D662F /* DialogViewController.m */; };
+		41D456B118021F8A004D662F /* DialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D456AF18021F8A004D662F /* DialogViewController.xib */; };
+		41D456B41802214B004D662F /* green-backgroun.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D456B31802214B004D662F /* green-backgroun.png */; };
+		4859D2BF17FFEE0F00970CD5 /* BattleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2BE17FFEE0F00970CD5 /* BattleView.xib */; };
 		4859D2C117FFF4C300970CD5 /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C017FFF4C300970CD5 /* grass.jpg */; };
 		4859D2C317FFF59500970CD5 /* pokemon-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */; };
 		4859D2C517FFF5DD00970CD5 /* dqni4j.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C417FFF5DD00970CD5 /* dqni4j.jpg */; };
@@ -55,8 +58,8 @@
 		41D4567717FFA9B5004D662F /* Pokemon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pokemon-Prefix.pch"; sourceTree = "<group>"; };
 		41D4567817FFA9B5004D662F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		41D4567917FFA9B5004D662F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		41D4567E17FFA9B5004D662F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		41D4567F17FFA9B5004D662F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		41D4567E17FFA9B5004D662F /* BattleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BattleViewController.h; sourceTree = "<group>"; };
+		41D4567F17FFA9B5004D662F /* BattleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BattleViewController.m; sourceTree = "<group>"; };
 		41D4568617FFA9B5004D662F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		41D4568C17FFA9B6004D662F /* PokemonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D4568D17FFA9B6004D662F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -65,7 +68,11 @@
 		41D4569917FFA9B6004D662F /* PokemonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokemonTests.m; sourceTree = "<group>"; };
 		41D456A317FFAB46004D662F /* MAPokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPokemon.h; sourceTree = "<group>"; };
 		41D456A417FFAB46004D662F /* MAPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPokemon.m; sourceTree = "<group>"; };
-		4859D2BE17FFEE0F00970CD5 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		41D456AD18021F8A004D662F /* DialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialogViewController.h; path = ../DialogViewController.h; sourceTree = "<group>"; };
+		41D456AE18021F8A004D662F /* DialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialogViewController.m; path = ../DialogViewController.m; sourceTree = "<group>"; };
+		41D456AF18021F8A004D662F /* DialogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DialogViewController.xib; path = ../DialogViewController.xib; sourceTree = "<group>"; };
+		41D456B31802214B004D662F /* green-backgroun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-backgroun.png"; sourceTree = "<group>"; };
+		4859D2BE17FFEE0F00970CD5 /* BattleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BattleView.xib; sourceTree = "<group>"; };
 		4859D2C017FFF4C300970CD5 /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
 		4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pokemon-logo.jpg"; sourceTree = "<group>"; };
 		4859D2C417FFF5DD00970CD5 /* dqni4j.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dqni4j.jpg; sourceTree = "<group>"; };
@@ -139,14 +146,13 @@
 			isa = PBXGroup;
 			children = (
 				41D456A617FFAB61004D662F /* Models */,
+				41D456B218021F98004D662F /* Views */,
 				41D4567817FFA9B5004D662F /* AppDelegate.h */,
 				4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */,
 				4859D2C417FFF5DD00970CD5 /* dqni4j.jpg */,
 				4859D2C017FFF4C300970CD5 /* grass.jpg */,
+				41D456B31802214B004D662F /* green-backgroun.png */,
 				41D4567917FFA9B5004D662F /* AppDelegate.m */,
-				4859D2BE17FFEE0F00970CD5 /* View.xib */,
-				41D4567E17FFA9B5004D662F /* ViewController.h */,
-				41D4567F17FFA9B5004D662F /* ViewController.m */,
 				41D4568617FFA9B5004D662F /* Images.xcassets */,
 				4873DE4117FFBEC4006DADC6 /* Squirtle.png */,
 				4873DE4217FFBEC4006DADC6 /* Squirtle_back.png */,
@@ -197,6 +203,19 @@
 				4873DE3F17FFBB60006DADC6 /* MATrainer.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		41D456B218021F98004D662F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4859D2BE17FFEE0F00970CD5 /* BattleView.xib */,
+				41D4567E17FFA9B5004D662F /* BattleViewController.h */,
+				41D4567F17FFA9B5004D662F /* BattleViewController.m */,
+				41D456AD18021F8A004D662F /* DialogViewController.h */,
+				41D456AE18021F8A004D662F /* DialogViewController.m */,
+				41D456AF18021F8A004D662F /* DialogViewController.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4873DE4417FFBEC4006DADC6 /* Squirtle_back.png in Resources */,
+				41D456B118021F8A004D662F /* DialogViewController.xib in Resources */,
+				41D456B41802214B004D662F /* green-backgroun.png in Resources */,
 				4859D2C317FFF59500970CD5 /* pokemon-logo.jpg in Resources */,
-				4859D2BF17FFEE0F00970CD5 /* View.xib in Resources */,
+				4859D2BF17FFEE0F00970CD5 /* BattleView.xib in Resources */,
 				4859D2C517FFF5DD00970CD5 /* dqni4j.jpg in Resources */,
 				41D4567417FFA9B5004D662F /* InfoPlist.strings in Resources */,
 				4859D2C117FFF4C300970CD5 /* grass.jpg in Resources */,
@@ -301,8 +322,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D456B018021F8A004D662F /* DialogViewController.m in Sources */,
 				4873DE4017FFBB60006DADC6 /* MATrainer.m in Sources */,
-				41D4568017FFA9B5004D662F /* ViewController.m in Sources */,
+				41D4568017FFA9B5004D662F /* BattleViewController.m in Sources */,
 				4873DE3D17FFB9A4006DADC6 /* MABattleManager.m in Sources */,
 				4873DE3A17FFAF7E006DADC6 /* MAPokemonMove.m in Sources */,
 				41D456A517FFAB46004D662F /* MAPokemon.m in Sources */,

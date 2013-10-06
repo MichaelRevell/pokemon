@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BattleViewController.h
 //  Pokemon
 //
 
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface ViewController : UIViewController
+@interface BattleViewController : UIViewController
 
 @end
