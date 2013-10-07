@@ -48,7 +48,7 @@
                       @"special_attack": @65,
                       @"special_defense": @65,
                       @"speed": @45,
-                      @"moves": @[[[MAPokemonMove alloc] initWithName:@"Tackle"], [[MAPokemonMove alloc] initWithName:@"Bubble"]]
+                      @"moves": @[[[MAPokemonMove alloc] initWithName:@"Tackle"], [[MAPokemonMove alloc] initWithName:@"Leech Seed"]]
                       },
               };
     
@@ -60,7 +60,7 @@
         NSDictionary *pokes = [MAPokemon pokeTable];
         NSDictionary *poke = [pokes objectForKey:type];
         
-        self.level = 1;
+        self.level = 10;
         self.max_hp = [[poke objectForKey:@"hp"] intValue];
         self.current_hp = [[poke objectForKey:@"hp"] intValue];
         self.element = [poke objectForKey:@"type"];
@@ -96,14 +96,17 @@
         // compute modifier
         double stab = [self.type isEqualToString:current_move.type] ? 1.5 : 1;
         double type = 1;
-        double crit = 1;
+        double crit = ((arc4random() % 10) > 7) ? 2 : 1;
+        NSString *wasCrit = @"";
+        if (crit == 2) {
+            wasCrit = @"It was a critical attack!";
+        }
         double r = (85 + arc4random() % 15) / 100.0f;
         double mod = stab * type * crit * r;
         
         NSLog(@"stab: %f, type: %f, crit: %f, r: %f, mod: %f", stab, type, crit, r, mod);
         
-        int damage = /*((2 * self.level + 10) / 250.0)
-            **/0.5 * (self.attack / (double)enemy.defense)
+        int damage = ((2 * self.level + 10) / 250.0) * (self.attack / (double)enemy.defense)
             * current_move.power
             + 2;
         
@@ -136,7 +139,7 @@
         */
         [enemy getsHitWith:damage];
         
-        status = [NSString stringWithFormat:@"%@ attacks %@ with %@. %@ %@ takes %d damage", self.name, enemy.name, current_move.name, @"", enemy.name, damage ];
+        status = [NSString stringWithFormat:@"%@ attacks %@ with %@. %@ %@ takes %d damage", self.name, enemy.name, current_move.name, wasCrit, enemy.name, damage ];
         //return current_move.power;
     } else {
         status = [NSString stringWithFormat:@"%@ did not have enough PP", self.name ];

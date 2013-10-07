@@ -92,6 +92,7 @@
         NSLog(@"balls %@", object);
         // DEBUG: Why isn't this working?
         self.user_pp.text = self.bm.trainer1.pokemon.pp_text;
+        self.computer_pp.text = self.bm.trainer2.pokemon.pp_text; // why i must do?
     }
     else if([keyPath isEqualToString:@"computer_pp"]) {
         // DEBUG: Why isn't this working?

@@ -25,9 +25,9 @@
                   @"pp": @1
             },
           @"Flamethrower": @{
-                  @"type": @"Normal",
+                  @"type": @"Fire",
                   @"category": @"Physical",
-                  @"power": @40,
+                  @"power": @70,
                   @"accuracy": @100,
                   @"pp": @3
                   },
@@ -40,6 +40,13 @@
                   },
           @"Bubble": @{
                   @"type": @"Water",
+                  @"category": @"Special",
+                  @"power": @20,
+                  @"accuracy": @100,
+                  @"pp": @3
+                  },
+          @"Leech Seed": @{
+                  @"type": @"Leaf",
                   @"category": @"Special",
                   @"power": @20,
                   @"accuracy": @100,

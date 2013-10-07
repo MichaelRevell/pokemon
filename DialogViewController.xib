@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="computer" destination="QA2-b9-xHV" id="BxO-WU-5Ue"/>
                 <outlet property="dialog" destination="ide-q1-0lL" id="FPV-r6-aZn"/>
+                <outlet property="next" destination="b9r-Qy-HyY" id="J9W-Ru-ja5"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

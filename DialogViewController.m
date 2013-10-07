@@ -22,6 +22,7 @@
 @property (strong, nonatomic) MATrainer *user;
 @property int step;
 @property NSString *userName;
+@property (strong, nonatomic) IBOutlet UIButton *next;
 
 @end
 
@@ -61,8 +62,9 @@
         self.battleViewController.user = self.user;
     }
     else if (self.step == 4) {
+        self.next.hidden = true;
         if (self.battleViewController.bm.trainer1.allPokemonDead) {
-            self.dialog.text = @"You've been defeated you, little bitch! Don't fuck with me again.";
+            self.dialog.text = @"You've been defeated, you little bitch! Don't fuck with me again.";
         } else if (self.battleViewController.bm.trainer2.allPokemonDead){
             self.dialog.text = @"Ah! How could you possibly defeat me???";
         }
@@ -94,6 +96,7 @@
     }
     else if (self.step == 3) {
         [self presentViewController:self.battleViewController animated:NO completion:nil];
+        self.dialog.text = @"";
         self.step++;
     }
 }
