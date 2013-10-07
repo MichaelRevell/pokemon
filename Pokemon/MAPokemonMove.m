@@ -22,21 +22,21 @@
                   @"category": @"Physical",
                   @"power": @40,
                   @"accuracy": @100,
-                  @"pp": @35
+                  @"pp": @1
             },
           @"Tackle": @{
                   @"type": @"Normal",
                   @"category": @"Physical",
                   @"power": @50,
                   @"accuracy": @100,
-                  @"pp": @35
+                  @"pp": @1
                   },
           @"Bubble": @{
                   @"type": @"Water",
                   @"category": @"Special",
                   @"power": @20,
                   @"accuracy": @100,
-                  @"pp": @35
+                  @"pp": @3
                   },
           };
     
