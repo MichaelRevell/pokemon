@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     
-    MATrainer *trainer1 = [[MATrainer alloc] initWithPokemon:[[MAPokemon alloc] initWithType:@"squirtle"]];
+    MATrainer *trainer1 = [[MATrainer alloc] initWithPokemon:[[MAPokemon alloc] initWithType:@"charmander"]];
     MATrainer *trainer2 = [[MATrainer alloc] initWithPokemon:[[MAPokemon alloc] initWithType:@"squirtle"]];
     
     self.bm = [[MABattleManager alloc] initWithTrainer:trainer1 otherTrainer:trainer2];
@@ -54,8 +54,8 @@
     [self.bm addObserver:self forKeyPath:@"is_user_move" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"game_over" options:NSKeyValueObservingOptionNew context:NULL];
     
-    self.user_image.image = [UIImage imageNamed:self.bm.trainer1.pokemon.frontSpritePath];
-    self.computer_image.image = [UIImage imageNamed:self.bm.trainer2.pokemon.backSpritePath];
+    self.user_image.image = [UIImage imageNamed:self.bm.trainer1.pokemon.backSpritePath];
+    self.computer_image.image = [UIImage imageNamed:self.bm.trainer2.pokemon.frontSpritePath];
     
     self.user_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer1.pokemon.current_hp, self.bm.trainer1.pokemon.max_hp];
     self.user_pp.text = [NSString stringWithFormat:@"PP: %d/%d", self.bm.trainer1.pokemon.current_pp, self.bm.trainer1.pokemon.max_pp];
