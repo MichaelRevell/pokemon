@@ -93,7 +93,28 @@
         self.current_pp -= current_move.pp;
         self.pp_text = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
         
-        double damage_from_level = (2.0 * self.level + 10)/250.0;
+        // compute modifier
+        double stab = [self.type isEqualToString:current_move.type] ? 1.5 : 1;
+        double type = 1;
+        double crit = 1;
+        double r = (85 + arc4random() % 15) / 100.0f;
+        double mod = stab * type * crit * r;
+        
+        NSLog(@"stab: %f, type: %f, crit: %f, r: %f, mod: %f", stab, type, crit, r, mod);
+        
+        int damage = /*((2 * self.level + 10) / 250.0)
+            **/0.5 * (self.attack / (double)enemy.defense)
+            * current_move.power
+            + 2;
+        
+        NSLog(@"lvl scale: %f, attack/defense: %f, power: %d",
+              ((2 * self.level + 10) / 250.0),
+              (self.attack / (double)enemy.defense),
+              current_move.power);
+        
+        damage *= mod;
+        
+/*        double damage_from_level = (2.0 * self.level + 10)/250.0;
         double attack_over_defense = self.attack / self.defense;
         int base = current_move.power;
         
@@ -110,12 +131,12 @@
         double modifier = stab * type * crit * random_mod;
         
         int damage = (damage_from_level * attack_over_defense * base + 2) * modifier;
-        
+ 
         NSLog(@"%f * %f * %d  * %f", stab, type, crit, random_mod);
-        
+        */
         [enemy getsHitWith:damage];
         
-        status = [NSString stringWithFormat:@"%@ attacks %@ with %@. %@ %@ takes %d damage", self.name, enemy.name, current_move.name, wasCrit, enemy.name, damage ];
+        status = [NSString stringWithFormat:@"%@ attacks %@ with %@. %@ %@ takes %d damage", self.name, enemy.name, current_move.name, @"", enemy.name, damage ];
         //return current_move.power;
     } else {
         status = [NSString stringWithFormat:@"%@ did not have enough PP", self.name ];
