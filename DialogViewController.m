@@ -10,6 +10,7 @@
 #import "InputViewController.h"
 #import "BattleViewController.h"
 #import "PokemonPickerViewController.h"
+#import "MATrainer.h"
 
 @interface DialogViewController ()
 @property (strong, nonatomic) UIViewController *nextViewController;
@@ -17,7 +18,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *dialog;
 @property (strong, nonatomic) InputViewController *inputViewController;
 @property (strong, nonatomic) PokemonPickerViewController *pokemonPickerViewController;
+@property (strong, nonatomic) BattleViewController *battleViewController;
+@property (strong, nonatomic) MATrainer *user;
 @property int step;
+@property NSString *userName;
 
 @end
 
@@ -32,7 +36,8 @@
     
     self.step = 1;
     self.inputViewController = [[InputViewController alloc] initWithNibName:@"InputViewController" bundle:nil];
-    self.pokemonPickerViewController = [[PokemonPickerViewController alloc] initWithNibName:@"PokemonPickerController" bundle:nil];
+    self.pokemonPickerViewController = [[PokemonPickerViewController alloc] initWithNibName:@"PokemonPickerViewController" bundle:nil];
+    self.battleViewController = [[BattleViewController alloc] initWithNibName:@"BattleView" bundle:nil] ;
     
     self.computer.image = [UIImage imageNamed:@"pers6.jpg" ];
     self.dialog.numberOfLines = 4;
@@ -43,9 +48,17 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (self.inputViewController.textValue != nil){
-        NSLog(@"Name will now be %@", self.inputViewController.textValue);
-        self.dialog.text = [NSString stringWithFormat:@"Prepare to Die, %@!", self.inputViewController.textValue];
+    if (self.step == 2) {
+        if (self.inputViewController.textValue != nil){
+            self.userName = self.inputViewController.textValue;
+            self.dialog.text = [NSString stringWithFormat:@"Now it's time to Pick your Pokemon, %@", self.userName];
+        }
+    }
+    else if (self.step == 3) {
+        self.dialog.text = [NSString stringWithFormat:@"Prepare to Die, %@!", self.userName];
+        self.user = [[MATrainer alloc] initWithPokemon:self.pokemonPickerViewController.pokemon];
+        self.user.name = self.userName;
+        self.battleViewController.user = self.user;
     }
 }
 
@@ -65,7 +78,13 @@
         NSLog(@"bitch");
         self.step++;
     } else if (self.step == 2) {
-        [self presentViewController:[[BattleViewController alloc] initWithNibName:@"BattleView" bundle:nil] animated:NO completion:nil];
+        [self presentViewController:self.pokemonPickerViewController animated:YES completion:nil];
+        self.dialog.text = @"";
+        self.step++;
+    }
+    else if (self.step == 3) {
+        [self presentViewController:self.battleViewController animated:NO completion:nil];
+        self.step++;
     }
 }
 

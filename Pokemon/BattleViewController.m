@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     
-    MATrainer *trainer1 = [[MATrainer alloc] initWithPokemon:[[MAPokemon alloc] initWithType:@"charmander"]];
+    MATrainer *trainer1 = self.user;
     MATrainer *trainer2 = [[MATrainer alloc] initWithPokemon:[[MAPokemon alloc] initWithType:@"squirtle"]];
     
     self.bm = [[MABattleManager alloc] initWithTrainer:trainer1 otherTrainer:trainer2];

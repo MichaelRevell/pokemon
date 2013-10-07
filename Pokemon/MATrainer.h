@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) MAPokemon *pokemon;
 @property (strong, nonatomic) NSString *status;
+@property (strong, nonatomic) NSString *name;
 
 
 -(id)initWithPokemon:(MAPokemon*)pokemon;
