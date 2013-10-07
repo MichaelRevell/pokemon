@@ -32,6 +32,8 @@
 		4859D2C117FFF4C300970CD5 /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C017FFF4C300970CD5 /* grass.jpg */; };
 		4859D2C317FFF59500970CD5 /* pokemon-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */; };
 		4859D2C517FFF5DD00970CD5 /* dqni4j.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C417FFF5DD00970CD5 /* dqni4j.jpg */; };
+		4859D2CE180243AF00970CD5 /* Charmander.png in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2CC180243AF00970CD5 /* Charmander.png */; };
+		4859D2CF180243AF00970CD5 /* Charmander_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2CD180243AF00970CD5 /* Charmander_back.png */; };
 		4873DE3A17FFAF7E006DADC6 /* MAPokemonMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */; };
 		4873DE3D17FFB9A4006DADC6 /* MABattleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3C17FFB9A4006DADC6 /* MABattleManager.m */; };
 		4873DE4017FFBB60006DADC6 /* MATrainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3F17FFBB60006DADC6 /* MATrainer.m */; };
@@ -83,6 +85,8 @@
 		4859D2C017FFF4C300970CD5 /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
 		4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pokemon-logo.jpg"; sourceTree = "<group>"; };
 		4859D2C417FFF5DD00970CD5 /* dqni4j.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dqni4j.jpg; sourceTree = "<group>"; };
+		4859D2CC180243AF00970CD5 /* Charmander.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Charmander.png; sourceTree = "<group>"; };
+		4859D2CD180243AF00970CD5 /* Charmander_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Charmander_back.png; sourceTree = "<group>"; };
 		4873DE3817FFAF7E006DADC6 /* MAPokemonMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPokemonMove.h; sourceTree = "<group>"; };
 		4873DE3917FFAF7E006DADC6 /* MAPokemonMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPokemonMove.m; sourceTree = "<group>"; };
 		4873DE3B17FFB9A4006DADC6 /* MABattleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MABattleManager.h; path = Controllers/MABattleManager.h; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				41D456A617FFAB61004D662F /* Models */,
 				41D456B218021F98004D662F /* Views */,
 				41D4567817FFA9B5004D662F /* AppDelegate.h */,
+				4859D2CC180243AF00970CD5 /* Charmander.png */,
+				4859D2CD180243AF00970CD5 /* Charmander_back.png */,
 				41D456B5180221F7004D662F /* pers6.jpg */,
 				4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */,
 				4859D2C417FFF5DD00970CD5 /* dqni4j.jpg */,
@@ -306,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4873DE4417FFBEC4006DADC6 /* Squirtle_back.png in Resources */,
+				4859D2CF180243AF00970CD5 /* Charmander_back.png in Resources */,
 				41D456B118021F8A004D662F /* DialogViewController.xib in Resources */,
 				41D456B41802214B004D662F /* green-backgroun.png in Resources */,
 				41D456C018022B65004D662F /* InputViewController.xib in Resources */,
@@ -314,6 +321,7 @@
 				4859D2BF17FFEE0F00970CD5 /* BattleView.xib in Resources */,
 				4859D2C517FFF5DD00970CD5 /* dqni4j.jpg in Resources */,
 				41D4567417FFA9B5004D662F /* InfoPlist.strings in Resources */,
+				4859D2CE180243AF00970CD5 /* Charmander.png in Resources */,
 				4859D2C117FFF4C300970CD5 /* grass.jpg in Resources */,
 				4873DE4317FFBEC4006DADC6 /* Squirtle.png in Resources */,
 				41D4568717FFA9B5004D662F /* Images.xcassets in Resources */,

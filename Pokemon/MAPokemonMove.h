@@ -20,6 +20,4 @@
 
 -(id)initWithName:(NSString *) name;
 
-+(MAPokemonMove*)buildMove:(NSString*) moveName;
-
 @end
