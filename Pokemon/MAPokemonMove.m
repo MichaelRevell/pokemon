@@ -10,33 +10,52 @@
 
 @implementation MAPokemonMove
 
-- (id)initWithName:(NSString *)name {
-    if(self = [super init]) {
-        if([name isEqualToString:@"Tackle"]) {
-            self.name = @"Tackle";
-            self.type = @"Normal";
-            self.category = @"Physical";
-            self.power = 10;
-            self.accuracy = 100;
-            self.pp = 1;
-        }
-        else if ([name isEqualToString:@"Squirt"]) {
-            self.name = @"Squirt";
-            self.type = @"Water";
-            self.category = @"Special";
-            self.power = 20;
-            self.accuracy = 90;
-            self.pp = 4;
-        }
-    }
-    return self;
++(NSDictionary*)moveTable {
+    static NSDictionary *moves = nil;
+    
+    if(moves != nil)
+        return moves;
+    
+    moves = @{
+          @"Scratch": @{
+                  @"type": @"Normal",
+                  @"category": @"Physical",
+                  @"power": @40,
+                  @"accuracy": @100,
+                  @"pp": @35
+            },
+          @"Tackle": @{
+                  @"type": @"Normal",
+                  @"category": @"Physical",
+                  @"power": @50,
+                  @"accuracy": @100,
+                  @"pp": @35
+                  },
+          @"Bubble": @{
+                  @"type": @"Water",
+                  @"category": @"Special",
+                  @"power": @20,
+                  @"accuracy": @100,
+                  @"pp": @35
+                  },
+          };
+    
+    return moves;
 }
 
-+(MAPokemonMove*)buildMove:(NSString*) moveName {
-   /* if([moveName isEqualToString:@"Tackle"]) {
-        return [[MAPokemonMove alloc] initWithType:@"Normal" andCategory:@"Physical" andPower:10 andAccuracy:100 andPP:35 andMoveName:moveName];
-    }*/
-    return nil;
+- (id)initWithName:(NSString *)name {
+    if(self = [super init]) {
+        NSDictionary *moves = [MAPokemonMove moveTable];
+        NSDictionary *moveData = [moves objectForKey:name];
+        
+        self.name = name;
+        self.type = [moveData objectForKey:@"type"];
+        self.category = [moveData objectForKey:@"category"];
+        self.power = [[moveData objectForKey:@"power"] intValue];
+        self.accuracy = [[moveData objectForKey:@"accuracy"] intValue];
+        self.pp = [[moveData objectForKey:@"pp"] intValue];
+    }
+    return self;
 }
 
 @end

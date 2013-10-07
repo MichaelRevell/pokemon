@@ -54,8 +54,8 @@
     [self.bm addObserver:self forKeyPath:@"is_user_move" options:NSKeyValueObservingOptionNew context:NULL];
     [self.bm addObserver:self forKeyPath:@"game_over" options:NSKeyValueObservingOptionNew context:NULL];
     
-    self.user_image.image = [UIImage imageNamed:@"Squirtle_back" ];
-    self.computer_image.image = [UIImage imageNamed:@"Squirtle" ];
+    self.user_image.image = [UIImage imageNamed:self.bm.trainer1.pokemon.frontSpritePath];
+    self.computer_image.image = [UIImage imageNamed:self.bm.trainer2.pokemon.backSpritePath];
     
     self.user_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer1.pokemon.current_hp, self.bm.trainer1.pokemon.max_hp];
     self.user_pp.text = [NSString stringWithFormat:@"PP: %d/%d", self.bm.trainer1.pokemon.current_pp, self.bm.trainer1.pokemon.max_pp];

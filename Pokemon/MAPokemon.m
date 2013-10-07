@@ -16,7 +16,7 @@
 - (id)initWithType:(NSString *)type {
     if (self = [super init]) {
         if ([type isEqualToString:@"squirtle"]) {
-            self.level = 10;
+            self.level = 5;
             self.max_hp = 20;
             self.current_hp = 20;
             self.max_pp = 10;
@@ -30,9 +30,28 @@
             self.special_attack = 5;
             self.special_defense = 5;
             self.speed = 5;
-            self.moves = @[[[MAPokemonMove alloc] initWithName:@"Tackle"], [[MAPokemonMove alloc] initWithName:@"Squirt"]];
+            self.moves = @[[[MAPokemonMove alloc] initWithName:@"Tackle"], [[MAPokemonMove alloc] initWithName:@"Bubble"]];
             self.frontSpritePath = @"Squirtle";
             self.backSpritePath = @"Squirtle_back";
+        }
+        else if([type isEqualToString:@"charmander"]) {
+            self.level = 1;
+            self.max_hp = 39;
+            self.current_hp = 39;
+            self.max_pp = 10;
+            self.current_pp = 10;
+            self.pp_text = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
+            self.element = @"fire";
+            self.type = type;
+            self.name = @"Charmander";
+            self.attack = 52;
+            self.defense = 42;
+            self.special_attack = 60;
+            self.special_defense = 50;
+            self.speed = 65;
+            self.moves = @[[[MAPokemonMove alloc] initWithName:@"Scratch"]];
+            self.frontSpritePath = @"Charmander";
+            self.backSpritePath = @"Charmander_back";
         }
         else {
             return nil;
