@@ -41,7 +41,7 @@
     [super viewDidLoad];
     
     MATrainer *trainer1 = self.user;
-    MATrainer *trainer2 = [[MATrainer alloc] initWithPokemon:[[MAPokemon alloc] initWithType:@"squirtle"]];
+    MATrainer *trainer2 = [[MATrainer alloc] initWithPokemon:[[MAPokemon alloc] initWithType:@"Squirtle"]];
     
     self.bm = [[MABattleManager alloc] initWithTrainer:trainer1 otherTrainer:trainer2];
     [self.bm addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];

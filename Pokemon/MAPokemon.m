@@ -38,7 +38,7 @@
                       @"special_attack": @50,
                       @"special_defense": @64,
                       @"speed": @43,
-                      @"moves": @[[[MAPokemonMove alloc] initWithName:@"Scratch"], [[MAPokemonMove alloc] initWithName:@"Tackle"]]
+                      @"moves": @[[[MAPokemonMove alloc] initWithName:@"Scratch"], [[MAPokemonMove alloc] initWithName:@"Flamethrower"]]
                       },
               @"Bulbasaur": @{
                       @"hp": @45,

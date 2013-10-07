@@ -24,6 +24,13 @@
                   @"accuracy": @100,
                   @"pp": @1
             },
+          @"Flamethrower": @{
+                  @"type": @"Normal",
+                  @"category": @"Physical",
+                  @"power": @40,
+                  @"accuracy": @100,
+                  @"pp": @3
+                  },
           @"Tackle": @{
                   @"type": @"Normal",
                   @"category": @"Physical",

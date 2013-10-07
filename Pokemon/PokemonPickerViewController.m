@@ -57,7 +57,7 @@
     [self pokemonSelected:@"Bulbasaur"];
 }
 - (IBAction)choose:(id)sender {
-    self.pokemon.name = self.choose.titleLabel.text;
+    self.pokemon.name = self.nameField.text;
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
