@@ -13,49 +13,74 @@
 
 @synthesize pp_text;
 
++(NSDictionary*)pokeTable {
+    static NSDictionary *pokes = nil;
+    
+    if(pokes != nil)
+        return pokes;
+    
+    pokes = @{
+              @"Squirtle": @{
+                      @"hp": @44,
+                      @"type": @"Water",
+                      @"attack": @48,
+                      @"defense": @65,
+                      @"special_attack": @50,
+                      @"special_defense": @64,
+                      @"speed": @43,
+                      @"moves": @[[[MAPokemonMove alloc] initWithName:@"Tackle"], [[MAPokemonMove alloc] initWithName:@"Bubble"]]
+                      },
+              @"Charmander": @{
+                      @"hp": @44,
+                      @"type": @"Water",
+                      @"attack": @48,
+                      @"defense": @65,
+                      @"special_attack": @50,
+                      @"special_defense": @64,
+                      @"speed": @43,
+                      @"moves": @[[[MAPokemonMove alloc] initWithName:@"Scratch"], [[MAPokemonMove alloc] initWithName:@"Tackle"]]
+                      },
+              @"Bulbasaur": @{
+                      @"hp": @45,
+                      @"type": @"Leaf",
+                      @"attack": @49,
+                      @"defense": @49,
+                      @"special_attack": @65,
+                      @"special_defense": @65,
+                      @"speed": @45,
+                      @"moves": @[[[MAPokemonMove alloc] initWithName:@"Tackle"], [[MAPokemonMove alloc] initWithName:@"Bubble"]]
+                      },
+              };
+    
+    return pokes;
+}
+
 - (id)initWithType:(NSString *)type {
     if (self = [super init]) {
-        if ([type isEqualToString:@"squirtle"]) {
-            self.level = 5;
-            self.max_hp = 20;
-            self.current_hp = 20;
-            self.max_pp = 10;
-            self.current_pp = 10;
-            self.pp_text = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
-            self.element = @"water";
-            self.type = type;
-            self.name = @"Squirtle";
-            self.attack = 5;
-            self.defense = 5;
-            self.special_attack = 5;
-            self.special_defense = 5;
-            self.speed = 5;
-            self.moves = @[[[MAPokemonMove alloc] initWithName:@"Tackle"], [[MAPokemonMove alloc] initWithName:@"Bubble"]];
-            self.frontSpritePath = @"Squirtle";
-            self.backSpritePath = @"Squirtle_back";
-        }
-        else if([type isEqualToString:@"charmander"]) {
-            self.level = 1;
-            self.max_hp = 39;
-            self.current_hp = 39;
-            self.max_pp = 10;
-            self.current_pp = 10;
-            self.pp_text = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
-            self.element = @"fire";
-            self.type = type;
-            self.name = @"Charmander";
-            self.attack = 52;
-            self.defense = 42;
-            self.special_attack = 60;
-            self.special_defense = 50;
-            self.speed = 65;
-            self.moves = @[[[MAPokemonMove alloc] initWithName:@"Scratch"]];
-            self.frontSpritePath = @"Charmander";
-            self.backSpritePath = @"Charmander_back";
-        }
-        else {
-            return nil;
-        }
+        NSDictionary *pokes = [MAPokemon pokeTable];
+        NSDictionary *poke = [pokes objectForKey:type];
+        
+        self.level = 1;
+        self.max_hp = [[poke objectForKey:@"hp"] intValue];
+        self.current_hp = [[poke objectForKey:@"hp"] intValue];
+        self.element = [poke objectForKey:@"type"];
+        self.type = type;
+        self.name = type;
+        self.attack = [[poke objectForKey:@"attack"] intValue];
+        self.defense = [[poke objectForKey:@"defense"] intValue];
+        self.special_attack = [[poke objectForKey:@"special_attack"] intValue];
+        self.special_defense = [[poke objectForKey:@"special_defense"] intValue];
+        self.speed = [[poke objectForKey:@"speed"] intValue];
+        self.moves = [poke objectForKey:@"moves"];
+        self.frontSpritePath = type;
+        self.backSpritePath = [NSString stringWithFormat:@"%@_back", type];
+        
+        // bcuz michael sucks
+        self.current_pp = 10;
+        self.max_pp = 10;
+        self.pp_text = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
+        
+        NSLog(@"%@", self);
     }
     
     return self;
