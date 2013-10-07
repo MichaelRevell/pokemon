@@ -61,7 +61,14 @@
         self.battleViewController.user = self.user;
     }
     else if (self.step == 4) {
-        self.dialog.text = @"You're Gay!";
+        if (self.battleViewController.bm.trainer1.allPokemonDead) {
+            self.dialog.text = @"You've been defeated you, little bitch! Don't fuck with me again.";
+        } else if (self.battleViewController.bm.trainer2.allPokemonDead){
+            self.dialog.text = @"Ah! How could you possibly defeat me???";
+        }
+        else {
+            self.dialog.text = @"Huh??";
+        }
     }
 }
 

@@ -30,8 +30,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *continueButton;
 
 
-@property (strong, nonatomic) MABattleManager *bm;
-
 @end
 
 @implementation BattleViewController
@@ -43,7 +41,8 @@
     [super viewDidLoad];
     
     MATrainer *trainer1 = self.user;
-    MATrainer *trainer2 = [[MATrainer alloc] initWithPokemon:[[MAPokemon alloc] initWithType:@"Squirtle"]];
+    NSArray *pokemen = @[@"Squirtle", @"Charmander", @"Bulbasaur"];
+    MATrainer *trainer2 = [[MATrainer alloc] initWithPokemon:[[MAPokemon alloc] initWithType:pokemen[arc4random() % 3]]];
     
     self.bm = [[MABattleManager alloc] initWithTrainer:trainer1 otherTrainer:trainer2];
     [self.bm addObserver:self forKeyPath:@"user_hp" options:NSKeyValueObservingOptionNew context:NULL];
