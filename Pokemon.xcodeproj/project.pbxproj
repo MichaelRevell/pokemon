@@ -41,6 +41,8 @@
 		4873DE4017FFBB60006DADC6 /* MATrainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873DE3F17FFBB60006DADC6 /* MATrainer.m */; };
 		4873DE4317FFBEC4006DADC6 /* Squirtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4873DE4117FFBEC4006DADC6 /* Squirtle.png */; };
 		4873DE4417FFBEC4006DADC6 /* Squirtle_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4873DE4217FFBEC4006DADC6 /* Squirtle_back.png */; };
+		48A56E2D180246EF00B9BCB7 /* Bulbasaur_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 48A56E2B180246EF00B9BCB7 /* Bulbasaur_back.png */; };
+		48A56E2E180246EF00B9BCB7 /* Bulbasaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 48A56E2C180246EF00B9BCB7 /* Bulbasaur.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		4873DE3F17FFBB60006DADC6 /* MATrainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATrainer.m; sourceTree = "<group>"; };
 		4873DE4117FFBEC4006DADC6 /* Squirtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squirtle.png; sourceTree = "<group>"; };
 		4873DE4217FFBEC4006DADC6 /* Squirtle_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squirtle_back.png; sourceTree = "<group>"; };
+		48A56E2B180246EF00B9BCB7 /* Bulbasaur_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bulbasaur_back.png; sourceTree = "<group>"; };
+		48A56E2C180246EF00B9BCB7 /* Bulbasaur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bulbasaur.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 				41D456B5180221F7004D662F /* pers6.jpg */,
 				4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */,
 				4859D2C417FFF5DD00970CD5 /* dqni4j.jpg */,
+				48A56E2B180246EF00B9BCB7 /* Bulbasaur_back.png */,
+				48A56E2C180246EF00B9BCB7 /* Bulbasaur.png */,
 				4859D2C017FFF4C300970CD5 /* grass.jpg */,
 				41D456B31802214B004D662F /* green-backgroun.png */,
 				41D4567917FFA9B5004D662F /* AppDelegate.m */,
@@ -325,10 +331,12 @@
 				41D456B41802214B004D662F /* green-backgroun.png in Resources */,
 				41D456C018022B65004D662F /* InputViewController.xib in Resources */,
 				41D456B6180221F7004D662F /* pers6.jpg in Resources */,
+				48A56E2D180246EF00B9BCB7 /* Bulbasaur_back.png in Resources */,
 				4859D2C317FFF59500970CD5 /* pokemon-logo.jpg in Resources */,
 				4859D2BF17FFEE0F00970CD5 /* BattleView.xib in Resources */,
 				4859D2C517FFF5DD00970CD5 /* dqni4j.jpg in Resources */,
 				41D4567417FFA9B5004D662F /* InfoPlist.strings in Resources */,
+				48A56E2E180246EF00B9BCB7 /* Bulbasaur.png in Resources */,
 				4859D2CE180243AF00970CD5 /* Charmander.png in Resources */,
 				41EC35B118023FB700B69BEE /* PokemonPickerViewController.xib in Resources */,
 				4859D2C117FFF4C300970CD5 /* grass.jpg in Resources */,
