@@ -10,4 +10,6 @@
 
 @interface InputViewController : UIViewController
 
+@property (strong, nonatomic) NSString *textValue;
+
 @end

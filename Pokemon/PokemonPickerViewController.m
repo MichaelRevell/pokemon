@@ -1,21 +1,21 @@
 //
-//  InputViewController.m
+//  PokemonPickerViewController.m
 //  Pokemon
 //
 //  Created by Michael Revell on 10/6/13.
 //  Copyright (c) 2013 Michael Revell. All rights reserved.
 //
 
-#import "InputViewController.h"
+#import "PokemonPickerViewController.h"
 
-@interface InputViewController ()
-@property (strong, nonatomic) IBOutlet UILabel *label;
-@property (strong, nonatomic) IBOutlet UITextField *textbox;
-@property (strong, nonatomic) IBOutlet UIButton *submit;
+@interface PokemonPickerViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *charmander;
+@property (strong, nonatomic) IBOutlet UIImageView *squirtle;
+@property (strong, nonatomic) IBOutlet UIImageView *bulbasaur;
 
 @end
 
-@implementation InputViewController
+@implementation PokemonPickerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,11 +24,6 @@
         // Custom initialization
     }
     return self;
-}
-- (IBAction)submit:(id)sender {
-    NSLog(@"This should send shit back or something");
-    self.textValue = self.textbox.text;
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad
