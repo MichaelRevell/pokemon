@@ -28,6 +28,8 @@
 		41D456B6180221F7004D662F /* pers6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41D456B5180221F7004D662F /* pers6.jpg */; };
 		41D456BF18022B65004D662F /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D456BD18022B65004D662F /* InputViewController.m */; };
 		41D456C018022B65004D662F /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D456BE18022B65004D662F /* InputViewController.xib */; };
+		41EC35B018023FB700B69BEE /* PokemonPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EC35AE18023FB700B69BEE /* PokemonPickerViewController.m */; };
+		41EC35B118023FB700B69BEE /* PokemonPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EC35AF18023FB700B69BEE /* PokemonPickerViewController.xib */; };
 		4859D2BF17FFEE0F00970CD5 /* BattleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2BE17FFEE0F00970CD5 /* BattleView.xib */; };
 		4859D2C117FFF4C300970CD5 /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C017FFF4C300970CD5 /* grass.jpg */; };
 		4859D2C317FFF59500970CD5 /* pokemon-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */; };
@@ -79,6 +81,9 @@
 		41D456BC18022B65004D662F /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputViewController.h; path = ../InputViewController.h; sourceTree = "<group>"; };
 		41D456BD18022B65004D662F /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputViewController.m; path = ../InputViewController.m; sourceTree = "<group>"; };
 		41D456BE18022B65004D662F /* InputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputViewController.xib; path = ../InputViewController.xib; sourceTree = "<group>"; };
+		41EC35AD18023FB700B69BEE /* PokemonPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonPickerViewController.h; sourceTree = "<group>"; };
+		41EC35AE18023FB700B69BEE /* PokemonPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonPickerViewController.m; sourceTree = "<group>"; };
+		41EC35AF18023FB700B69BEE /* PokemonPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PokemonPickerViewController.xib; sourceTree = "<group>"; };
 		4859D2BE17FFEE0F00970CD5 /* BattleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BattleView.xib; sourceTree = "<group>"; };
 		4859D2C017FFF4C300970CD5 /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
 		4859D2C217FFF59500970CD5 /* pokemon-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pokemon-logo.jpg"; sourceTree = "<group>"; };
@@ -224,6 +229,9 @@
 				41D4567F17FFA9B5004D662F /* BattleViewController.m */,
 				41D456AD18021F8A004D662F /* DialogViewController.h */,
 				41D456AE18021F8A004D662F /* DialogViewController.m */,
+				41EC35AD18023FB700B69BEE /* PokemonPickerViewController.h */,
+				41EC35AE18023FB700B69BEE /* PokemonPickerViewController.m */,
+				41EC35AF18023FB700B69BEE /* PokemonPickerViewController.xib */,
 				41D456AF18021F8A004D662F /* DialogViewController.xib */,
 			);
 			name = Views;
@@ -314,6 +322,7 @@
 				4859D2BF17FFEE0F00970CD5 /* BattleView.xib in Resources */,
 				4859D2C517FFF5DD00970CD5 /* dqni4j.jpg in Resources */,
 				41D4567417FFA9B5004D662F /* InfoPlist.strings in Resources */,
+				41EC35B118023FB700B69BEE /* PokemonPickerViewController.xib in Resources */,
 				4859D2C117FFF4C300970CD5 /* grass.jpg in Resources */,
 				4873DE4317FFBEC4006DADC6 /* Squirtle.png in Resources */,
 				41D4568717FFA9B5004D662F /* Images.xcassets in Resources */,
@@ -337,6 +346,7 @@
 			files = (
 				41D456B018021F8A004D662F /* DialogViewController.m in Sources */,
 				4873DE4017FFBB60006DADC6 /* MATrainer.m in Sources */,
+				41EC35B018023FB700B69BEE /* PokemonPickerViewController.m in Sources */,
 				41D4568017FFA9B5004D662F /* BattleViewController.m in Sources */,
 				4873DE3D17FFB9A4006DADC6 /* MABattleManager.m in Sources */,
 				4873DE3A17FFAF7E006DADC6 /* MAPokemonMove.m in Sources */,

@@ -9,12 +9,14 @@
 #import "DialogViewController.h"
 #import "InputViewController.h"
 #import "BattleViewController.h"
+#import "PokemonPickerViewController.h"
 
 @interface DialogViewController ()
 @property (strong, nonatomic) UIViewController *nextViewController;
 @property (strong, nonatomic) IBOutlet UIImageView *computer;
 @property (strong, nonatomic) IBOutlet UILabel *dialog;
 @property (strong, nonatomic) InputViewController *inputViewController;
+@property (strong, nonatomic) PokemonPickerViewController *pokemonPickerViewController;
 @property int step;
 
 @end
@@ -30,6 +32,7 @@
     
     self.step = 1;
     self.inputViewController = [[InputViewController alloc] initWithNibName:@"InputViewController" bundle:nil];
+    self.pokemonPickerViewController = [[PokemonPickerViewController alloc] initWithNibName:@"PokemonPickerController" bundle:nil];
     
     self.computer.image = [UIImage imageNamed:@"pers6.jpg" ];
     self.dialog.numberOfLines = 4;
