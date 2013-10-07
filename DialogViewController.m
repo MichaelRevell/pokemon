@@ -8,11 +8,14 @@
 
 #import "DialogViewController.h"
 #import "InputViewController.h"
+#import "BattleViewController.h"
 
 @interface DialogViewController ()
 @property (strong, nonatomic) UIViewController *nextViewController;
 @property (strong, nonatomic) IBOutlet UIImageView *computer;
 @property (strong, nonatomic) IBOutlet UILabel *dialog;
+@property (strong, nonatomic) InputViewController *inputViewController;
+@property int step;
 
 @end
 
@@ -25,10 +28,22 @@
 {
     [super viewDidLoad];
     
+    self.step = 1;
+    self.inputViewController = [[InputViewController alloc] initWithNibName:@"InputViewController" bundle:nil];
+    
     self.computer.image = [UIImage imageNamed:@"pers6.jpg" ];
     self.dialog.numberOfLines = 4;
     self.dialog.text = @"Bitches be tellin' me that you ain't got no name. What's up with that shit?";
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.inputViewController.textValue != nil){
+        NSLog(@"Name will now be %@", self.inputViewController.textValue);
+        self.dialog.text = [NSString stringWithFormat:@"Prepare to Die, %@!", self.inputViewController.textValue];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,11 +53,17 @@
 }
 
 - (IBAction)next:(id)sender {
-    InputViewController *intputViewController = [[InputViewController alloc] initWithNibName:@"InputViewController" bundle:nil];
     
     //[self.navigationController pushViewController:intputViewController animated:YES];
-    self.nextViewController = intputViewController;
-    NSLog(@"bitch");
+    //self.nextViewController = self.inputViewController;
+    if (self.step ==1) {
+        [self presentViewController:self.inputViewController animated:YES completion:nil];
+        self.dialog.text = @"";
+        NSLog(@"bitch");
+        self.step++;
+    } else if (self.step == 2) {
+        [self presentViewController:[[BattleViewController alloc] initWithNibName:@"BattleView" bundle:nil] animated:NO completion:nil];
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

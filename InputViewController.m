@@ -25,6 +25,11 @@
     }
     return self;
 }
+- (IBAction)submit:(id)sender {
+    NSLog(@"This should send shit back or something");
+    self.textValue = self.textbox.text;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad
 {
