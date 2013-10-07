@@ -11,6 +11,7 @@
                 <outlet property="computer_hp" destination="L9U-j3-xr3" id="L5M-QO-NFL"/>
                 <outlet property="computer_image" destination="vci-Fs-RZO" id="oOQ-qH-NmU"/>
                 <outlet property="computer_pp" destination="g0P-Ek-4jK" id="TS0-9r-bPG"/>
+                <outlet property="continueButton" destination="cq8-FO-dCE" id="wEe-Ky-yWP"/>
                 <outlet property="status" destination="PKH-I6-fMQ" id="BD9-T4-6cb"/>
                 <outlet property="user_hp" destination="gVb-jQ-beo" id="g3f-tp-qTY"/>
                 <outlet property="user_image" destination="V8G-l6-ELF" id="kGd-sC-YkB"/>
@@ -85,6 +86,16 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cq8-FO-dCE">
+                    <rect key="frame" x="59" y="404" width="225" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Continue">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="continuePressed:" destination="-1" eventType="touchUpInside" id="9iX-cg-8cD"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

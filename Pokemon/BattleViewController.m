@@ -27,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *attack;
 @property (strong, nonatomic) IBOutlet UIButton *attack2;
 @property (weak, nonatomic) IBOutlet UILabel *status;
+@property (strong, nonatomic) IBOutlet UIButton *continueButton;
+
 
 @property (strong, nonatomic) MABattleManager *bm;
 
@@ -64,6 +66,7 @@
     self.computer_hp.text = [NSString stringWithFormat:@"HP: %d/%d", self.bm.trainer2.pokemon.current_hp, self.bm.trainer2.pokemon.max_hp];
     self.computer_pp.text = [NSString stringWithFormat:@"PP: %d/%d", self.bm.trainer2.pokemon.current_pp, self.bm.trainer2.pokemon.max_pp];
     self.status.numberOfLines = 4;
+    self.continueButton.hidden = true;
     
     
     [self.attack setTitle:[NSString stringWithFormat:@"%@ (%d)", [[self.bm.trainer1.pokemon.moves objectAtIndex:0] name], [[self.bm.trainer1.pokemon.moves objectAtIndex:0] pp]] forState:UIControlStateNormal];
@@ -102,6 +105,8 @@
         if (self.bm.game_over == true) {
             [self.attack setEnabled:NO];
             [self.attack2 setEnabled:NO];
+            self.status.hidden = true;
+            self.continueButton.hidden = false;
         } else {
             [self.attack setEnabled:YES];
             [self.attack2 setEnabled:YES];
@@ -120,6 +125,9 @@
 }
 - (IBAction)bitches:(id)sender {
     self.nextViewController = [[DialogViewController alloc] initWithNibName:@"DialogViewController" bundle:nil];
+}
+- (IBAction)continuePressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)clickedAttack:(id)sender {

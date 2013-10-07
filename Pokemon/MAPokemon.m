@@ -76,8 +76,8 @@
         self.backSpritePath = [NSString stringWithFormat:@"%@_back", type];
         
         // bcuz michael sucks
-        self.current_pp = 10;
-        self.max_pp = 10;
+        self.current_pp = 20;
+        self.max_pp = 20;
         self.pp_text = [NSString stringWithFormat:@"PP: %d/%d", self.current_pp, self.max_pp];
         
         NSLog(@"%@", self);

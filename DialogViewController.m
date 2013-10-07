@@ -60,6 +60,9 @@
         self.user.name = self.userName;
         self.battleViewController.user = self.user;
     }
+    else if (self.step == 4) {
+        self.dialog.text = @"You're Gay!";
+    }
 }
 
 - (void)didReceiveMemoryWarning
