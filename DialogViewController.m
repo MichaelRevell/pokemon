@@ -43,7 +43,7 @@
     
     self.computer.image = [UIImage imageNamed:@"pers6.jpg" ];
     self.dialog.numberOfLines = 4;
-    self.dialog.text = @"Bitches be tellin' me that you ain't got no name. What's up with that shit?";
+    self.dialog.text = @"Welcome, young trainer. Don't be shy. What is your name?";
     // Do any additional setup after loading the view from its nib.
 }
 
