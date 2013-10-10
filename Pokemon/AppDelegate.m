@@ -18,12 +18,14 @@
     //self.window.rootViewController = [[BattleViewController alloc] initWithNibName:@"BattleView" bundle:nil];
     //self.window.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"dqni4j.jpg"]];
     
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[DialogViewController alloc] initWithNibName:@"DialogViewController" bundle:nil];
     self.window.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"dqni4j.jpg"]];
     //self.window.rootViewController = [[PokemonPickerViewController alloc] initWithNibName:@"PokemonPickerViewController" bundle:nil];
-    [self.window.rootViewController addObserver:self forKeyPath:@"nextViewController" options:NSKeyValueObservingOptionNew context:NULL];
+    //[self.window.rootViewController addObserver:self forKeyPath:@"nextViewController" options:NSKeyValueObservingOptionNew context:NULL];
  //   self.window.backgroundColor = [UIColor redColor];
     // Override point for customization after application launch.
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

@@ -12,6 +12,7 @@
 #import "PokemonPickerViewController.h"
 #import "MATrainer.h"
 
+
 @interface DialogViewController ()
 @property (strong, nonatomic) UIViewController *nextViewController;
 @property (strong, nonatomic) IBOutlet UIImageView *computer;
